@@ -30,6 +30,22 @@
     }
 }
 
+.Button{
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 333px;
+    border: 1px solid #212121;
+    background: #010101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    img{
+        max-width: 19px;
+    }
+}
+
+
 @media(max-width: 1000px){
     .Container{
         width: 90%;

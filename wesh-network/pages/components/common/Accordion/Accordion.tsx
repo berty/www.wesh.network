@@ -23,7 +23,7 @@ const Accordion = ({ title, text }: AccordionProps) => {
       <div className={styles.Opener}>
         <h3>{title}</h3>
         <button onClick={handleOpen} className={styles.Button}>
-          <img src={open ? "./img/-.png" : "./img/+.png"} width="17px" alt="" />
+          <img src={open ? "./img/-.png" : "./img/+.png"} alt="" />
         </button>
       </div>
       <div className={open ? styles.slide : styles.none}>

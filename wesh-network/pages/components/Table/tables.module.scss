@@ -1,0 +1,24 @@
+.board{
+    .grey{
+        opacity: 0.48;
+    }
+    table{
+        border-collapse:collapse;
+        font-size: 14px;
+    }
+    td{
+        width: 160px;
+        padding: 10px;
+        border: 1px solid #212121;
+    }
+}
+
+@media(max-width: 1000px){
+    .board{
+        td{
+            width: 90px;
+            padding: 5px;
+    }
+    margin-bottom: 70px;
+}
+}

@@ -1,0 +1,13 @@
+.Container{
+    padding-left: 148px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width: 1000px){
+    .Container{
+        width: 100%;
+        padding-left: 0px;
+        align-items: center;
+    }
+}

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.NavbarContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 80px;
+    font-family: 'Inter', sans-serif;
+}
+
+.Navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img{
+        max-width: 200px;
+    }
+
+    .Links{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        a{
+            font-weight: 400;
+            font-size: 15px;
+            text-decoration: none;
+        }
+    }
+}
+
+.OpenBurger{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: none;
+    background: #010101;
+    padding: 30px;
+}
+
+.BurgerClose{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        width: 150px;
+        height: 27.6px;
+    }
+}
+
+.close{
+    display: none;
+    z-index: 3;
+}
+
+.LinksMobile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 25px;
+    height: 50%;
+    a{
+        font-size: 30px;
+        font-weight: 300;
+    }
+}
+
+.credits{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    p{
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.48;
+    }
+    div{
+      display: flex;
+      gap: 10px;
+      img{
+        max-width: 20px;
+      }
+    }
+  }
+
+  .green{
+    color: #A8FF93;
+    font-weight: 500;
+}
+
+.Burger{
+    display: none;
+}
+
+
+@media(max-width: 990px){
+    .Burger{
+        display: block;
+    }
+    .NavbarContainer{
+        padding: 20px;
+        .Navbar{
+            img{
+                max-width: 150px;
+            }
+        }
+        .Links{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,1014 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+
+.Body {
+  width: 100vw;
+  background: #010101;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.white{
+  color: white;
+}
+.grey{
+  color: #333333;
+}
+.green{
+  color: #A8FF93;
+}
+
+/* Section 1 */
+
+.Section1 {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  .MainTitle {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 100px;
+
+    h1{
+      font-weight: 400;
+      font-size: 100px;
+      letter-spacing: -0.04em;
+      margin-bottom: 25px;
+    }
+    
+    h3{
+      font-weight: 500;
+      font-size: 25px;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+    
+    p{
+      font-weight: 400;
+      font-size: 14px; 
+      opacity: 0.48;
+      margin-bottom: 43px;
+    }
+  }
+  .HomeImage {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 100%;
+      min-width: 420px;
+      max-width: 420px;
+      margin-right: 93px;
+    }
+  }
+}
+
+/* Section 2 */
+
+.Section2 {
+  border-top: 1px solid #212121;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  margin-bottom: 50PX;
+  .Section2Container{
+    background: url('../public/img/BackgroundSection2.png') center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    max-width: 1360px;
+    max-height: 620px;
+    border: 1px solid black;
+
+    
+    .Section2Card{
+      width: 80%;
+      height: 90%;
+      max-width: 1144px;
+      max-height: 383px;
+      background: #010101;
+      border: 1px solid white;
+      border-radius: 12px;
+      display: flex;
+      padding: 20px;
+
+      .Section2Img{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Section2Text{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        letter-spacing: -0.04em;
+
+        h2{
+          font-weight: 400;
+          font-size: 48px;
+        }
+
+        p{
+          max-width: 382px;
+          font-weight: 400;
+          font-size: 14px;
+          opacity: 0.48;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+.Section3 {
+  border-top: 1px solid #212121;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 70vh;
+  padding-top: 50px;
+  margin-bottom: 50PX;
+}
+
+.Section3Title{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 148px;
+  margin-bottom: 73px;
+  h2{
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  h3{
+  font-weight: 400;
+  font-size: 25px;
+  }
+}
+
+.Section3Content{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 64px;
+  margin: 0 auto;
+
+.gridIcon{
+  width: 60%;
+  max-width: 625px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  img{
+    max-width: 90px;
+  }
+  .gridIconColumn{
+    h2{
+      font-size: 25px;
+      font-weight: 400;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .gridIconRow{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    h3{
+      font-weight: 400;
+    font-size: 18px;
+    }
+  }
+}
+}
+
+    // Section 4
+    
+    .Section4{
+      border-top: 1px solid #212121;
+      width: 100%;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+      margin-bottom: 50PX;      
+      .Section4Column{
+        width: 100%;
+      }
+      h2{
+        margin-bottom: 88px;
+        width: 100%;
+        padding-left: 148px;
+        font-weight: 300;
+        font-size: 48px;
+      }
+      .CardGrid{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    // Section 5
+
+    .Section5{
+      border-top: 1px solid #212121;
+      padding-top: 50px;
+      margin-bottom: 50PX;      
+      h2{
+        font-weight: 300;
+        font-size: 48px;
+        padding-left: 148px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      h3{
+        width: 80%;
+        font-weight: 300;
+        font-size: 25px;
+        margin-bottom: 72px;
+        padding-left: 148px;
+      }
+    }
+    
+    .useCasesGrid{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 122px;
+      .useCasesColumn{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        div{
+          border-bottom: 1px solid #212121;
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          img{
+            max-width: 72px;
+          }
+          h4{   
+            font-weight: 400;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .Section6{
+      border-top: 1px solid #212121;
+      width: 100%;
+      min-height: 60vh;
+      display: flex;
+      padding-top: 50px;
+      margin-bottom: 50PX;
+      .right{
+        display: none;
+      }
+      .left{
+        width: auto;
+        .Section6Text{
+          width: 100%;
+          padding-left: 148px;
+          h3{
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.24em;
+          }
+
+          h2{
+            max-width: 618px;
+          font-weight: 400;
+          font-size: 48px;
+          letter-spacing: -0.04em;
+          margin-bottom: 72px;
+          }
+        }
+        .Section6Grid{
+          padding-left: 148px;
+          display: flex;
+          gap: 60px;
+          justify-content: flex-start;
+        }
+        .Section6Card{
+          max-width: 224px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          img{
+            max-width: 96px;
+          }
+          h4{
+            letter-spacing: -0.03em;
+            font-weight: 500;
+            font-size: 25px;
+          }
+          p{
+            opacity: 0.48;
+            font-weight: 300;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .Section7{
+      border-top: 1px solid #212121;
+      width: 100%;
+      min-height: 70vh;
+      padding-top: 50px;
+      margin-bottom: 50PX;
+      display: flex;
+      align-items: center;
+      .right{
+        display: none;
+      }
+      .Section7Left{
+        width: 60%;
+        .Section7Text{
+          h2{
+            font-weight: 300;
+            font-size: 48px;
+            padding-left: 148px;
+            width: 100%;
+            margin-bottom: 20px;
+          }
+          h3{
+            width: 80%;
+            font-weight: 300;
+            font-size: 25px;
+            margin-bottom: 72px;
+            padding-left: 148px;
+          }
+        }
+        .Section7Content{
+          padding-left: 148px;
+          width: 100%;
+          display: flex;
+          gap: 100px;
+          .useCasesColumn{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            div{
+              
+              img{
+                width: 96px;
+              }
+              h4{
+                font-weight: 400;
+                font-size: 18px;
+              }
+              display: flex;
+              align-items: center;
+              gap: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    .Section8{
+      width: 100%;
+      min-height: 60vh;
+      padding-top: 50px;
+      margin-bottom: 50px;
+      border-top: 1px solid #212121;
+      h2{
+        padding-left: 148px;
+        font-weight: 300;
+        font-size: 48px;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+        margin-bottom: 53px;
+      }
+    }
+
+
+    .credits{
+      border-top: 1px solid #212121;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px 148px;
+      p{
+        opacity: 0.48;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      div{
+        display: flex;
+        gap: 10px;
+        img{
+          max-width: 25px;
+          cursor: pointer;
+        }
+      }
+    }
+    
+@media(min-width: 1200px){
+  .Section7{
+    .right{
+      display: flex;
+      width: 40%;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 150px;
+      img{
+        max-width: 320px;
+        width: 98%;
+      }
+    }
+  }
+
+  .Section6{
+    .left{
+      width: 60%;
+    }
+    .right{
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        max-width: 256px;
+        width: 95%;
+      }
+    }
+  }
+
+  .Section4{
+    .CardGrid{
+      justify-content: center;
+      gap: 100px;
+    }
+  }
+
+  .Section5{
+    display: flex;
+    flex-direction: column;
+    h2{
+      padding-left: 148px;
+    }
+     h3{
+      padding-left: 148px;
+    }
+  }
+}
+
+@media(max-width: 1500px){
+  .Section3Content{
+    justify-content: flex-start;
+    padding-left: 148px;
+    .gridIcon{
+      justify-content: flex-start;
+    }
+  }
+  .Section4{
+    .CardGrid{
+      padding-left: 148px;
+      justify-content: flex-start;
+    }
+  }
+  .Section5{
+    .useCasesGrid{
+      justify-content: flex-start;
+      padding-left: 148px;
+    }
+  }
+}
+
+@media(max-width: 1200px){
+  .Section5{
+    .useCasesGrid{
+      justify-content: center;
+      padding-left: 0px;
+    }
+  }
+  .Section4{
+    .CardGrid{
+      padding-left: 0px;
+      justify-content: center;
+    }
+  }
+  .Section3Content{
+    justify-content: space-evenly;
+    padding-left: 0px; 
+    .gridIcon{
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media(max-width: 1000px){
+  .credits{
+    padding: 20px;
+  }
+  .Section8{
+    h2{
+      text-align: center;
+      padding-left: 0px;
+    }
+  }
+  .Section7{
+    .Section7Left{
+      width: 100%;
+    .Section7Text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      h2{
+        width: auto;
+        padding-left: 0px;
+      }
+      h3{
+        padding-left: 0px;
+      }
+    }
+    .Section7Content{
+      justify-content: center;
+      padding-left: 0px;
+    }
+  }
+  }
+
+
+  .Section6{
+    width: 100%;
+    display: flex;
+    .left{
+      width: 100%;
+      .Section6Grid{
+        padding-left: 0px;
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+      }
+    }
+  }
+
+
+  .Section5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+      padding-left: 0px;
+      width: 80%;
+      text-align: center;
+    }
+    h3{
+      width: 80%;
+      padding-left: 0px;
+      text-align: center;
+    }
+  }
+
+
+  .useCasesGrid{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    .useCasesColumn{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      div{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .Section4{
+    h2{
+      text-align: center;
+      padding-left: 0px;
+    }
+     h3{
+      text-align: center;
+      padding-left: 0px;
+    }
+    
+  }
+  .Section3Content{
+    gap: 40px;
+    justify-content: center;
+  .gridIcon{
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    img{
+      max-width: 60px;
+    }
+    .gridIconColumn{
+      h2{
+        font-size: 16px;
+        font-weight: 400;
+      }
+      gap: 25px;
+    }
+    .gridIconRow{
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+  }
+  }
+
+  
+.Section2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .Section2Container{
+    background: url('../public/img/BackgroundSection2.png') center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    max-width: 1360px;
+    max-height: 620px;
+    border: 1px solid black;
+
+    
+    .Section2Card{
+      width: 80%;
+      height: 90%;
+      max-width: 1144px;
+      max-height: 383px;
+      background: #010101;
+      border: 1px solid white;
+      border-radius: 12px;
+      display: flex;
+      padding: 20px;
+
+      .Section2Img{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Section2Text{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        letter-spacing: -0.04em;
+
+        h2{
+          font-weight: 400;
+          font-size: 48px;
+        }
+
+        p{
+          max-width: 382px;
+          font-weight: 400;
+          font-size: 14px;
+          opacity: 0.48;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+  .Section1 {
+    .MainTitle {
+      position: relative;
+      z-index: 1;
+      width: 80%;
+      padding-left: 30px;
+      h1{
+        font-size: 70px;
+      }
+      
+      h3{
+        font-size: 20px;
+      }
+    }
+    .HomeImage {
+      img{
+        width: 100%;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+
+@media(max-width: 843px){
+
+  .Section6{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    .left{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      .Section6Text{
+        width: 80%;
+        padding-left: 0px;
+        h2{
+        font-size: 25px;
+        letter-spacing: -0.04em;
+        margin-bottom: 72px;
+        }
+      }
+      .Section6Grid{
+        padding-left: 0px;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .Section6Card{
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        max-width: 300px;
+
+      }
+    }
+  }
+  
+  .Section5{
+    h2{
+      font-size: 30px;
+    }
+    h3{
+      font-size: 16px;
+    }
+  }
+  .Section3Content{
+    flex-direction: column;
+    align-items: center;
+  .gridIcon{
+    // width: 336px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px 0px;
+    .gridIconColumn{
+      h2{
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .gridIconRow{
+      width: 100%;
+    }
+  }
+  }
+
+}
+@media(max-width: 786px){
+
+  // SECTION 1 MOBILE
+
+  .Section1 {
+    flex-direction: column;
+    height: 80vh;
+    .MainTitle {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding-left: 0px;
+      align-items: center;
+
+      div{
+        width: 90%;
+        h1{
+          font-size: 40px;
+        }
+        
+        h3{
+          font-size: 18px;
+        }
+      }
+    }
+    .HomeImage {
+      display: none;
+      img{
+        width: 100%;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  // SECTION 2 MOBILE
+
+.Section2 {
+  .Section2Container{
+    max-height: 700px;
+    .Section2Card{
+      width: 90%;
+      height: 90%;
+      flex-direction: column;
+      max-height: none;
+      padding: 30px 10px;
+      .Section2Img{
+        width: 100%;
+        height: 50%;
+        img{
+          max-width: 80%;
+        }
+      }
+
+      .Section2Text{
+        width: 100%;
+        height: 50%;
+        h2{
+          font-weight: 400;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+  // SECTION 3 MOBILE
+
+  .Section3{
+    .Section3Title{
+      margin-bottom: 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 0px;
+      h2{
+        font-size: 25px;
+        font-weight: 300;
+        margin-bottom: 16px;
+        .white{
+          color: white;
+        }
+        .grey{
+          color: #333333;
+        }
+        .green{
+          color: #A8FF93;
+        }
+      }
+    
+      h3{
+      font-weight: 400;
+      font-size: 18px;
+      max-width: 65%;
+      }
+    }
+  }
+  // Section 4 MOBILE
+    .Section4{
+    .Section4Column{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+      .CardGrid{
+        flex-direction: column;
+      }
+        h2{
+          font-size: 25px;
+          margin-bottom: 20px;
+          width: 70%;
+        }
+  
+    }
+
+    // SECTION 5 MOBILE  
+    .useCasesGrid{
+      padding: 10px;
+      gap: 5px;
+      .useCasesColumn{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        div{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          height: 100px;
+          gap: 10px;
+          width: 110px;
+          img{
+            max-width: 50px;
+          }
+          h4{   
+            font-weight: 400;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    // SECTION 6 MOBILE 
+
+    .Section7{
+      .Section7Left{
+        width: 100%;
+      .Section7Text{
+        h2{
+          font-size: 25px;
+        }
+        h3{
+          font-size: 18px;
+        }
+      }
+      .Section7Content{
+        justify-content: center;
+        padding-left: 0px;
+        gap: 30px;
+      .useCasesColumn{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        div{
+          justify-content: center;
+          gap: 20px;
+          flex-direction: column;
+          img{
+            width: 70px;
+          }
+          h4{
+            font-weight: 400;
+            font-size: 13px;
+          }
+        }
+      }
+      }
+    }
+    }
+
+  //  SECTION 8 MOBILE
+
+  .Section8{
+
+    h2{
+      font-size: 25px;
+    }
+  }
+
+  .credits{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    p{
+      text-align: center;
+      font-size: 14px;
+    }
+    div{
+      gap: 10px;
+      img{
+        max-width: 20px;
+      }
+    }
+  }
+
+}
+

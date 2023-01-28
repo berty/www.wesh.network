@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.primary{
+    cursor: pointer;
+    width: 169px;
+    background: rgba(168, 255, 147, 1);
+    color: #010101;
+    height: 58px;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 333px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Secondary{
+    cursor: pointer;
+    padding: 12px 24px;    
+    border-radius: 333px;
+    
+}
+
+.Navbar{
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 333px;
+    border: white solid 1px;
+    background: #010101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    img{
+        width: 19px;
+    }
+}
+

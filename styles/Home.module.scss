@@ -104,6 +104,7 @@
       max-height: 383px;
       background: #010101;
       border: 1px solid white;
+      color: white;
       border-radius: 12px;
       display: flex;
       padding: 20px;
@@ -124,13 +125,16 @@
         justify-content: center;
         gap: 16px;
         letter-spacing: -0.04em;
+        color: white;
 
         h2{
+          color: white;
           font-weight: 400;
           font-size: 48px;
         }
 
         p{
+          color: #7A7A7A;
           max-width: 382px;
           font-weight: 400;
           font-size: 14px;

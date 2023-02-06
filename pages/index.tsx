@@ -47,7 +47,7 @@ export default function Home() {
               <div className={styles.Section2Text}>
                 <h2>Safe and Secure</h2>
                 <p>
-                  WESH provides secured distributed and asynchronous
+                  WESH provides a secured, distributed and asynchronous
                   communication protocol, both with or without internet access
                   using IPFS and direct transports such as BLE and proximity
                   drivers. <br /> <br /> WESH Protocol provides end-to-end

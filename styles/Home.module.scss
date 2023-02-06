@@ -138,7 +138,6 @@
           max-width: 382px;
           font-weight: 400;
           font-size: 14px;
-          opacity: 0.48;
           line-height: 22px;
         }
       }
@@ -174,6 +173,7 @@
 }
 
 .Section3Content{
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -221,6 +221,7 @@
       align-items: center;
       padding-top: 50px;
       margin-bottom: 50PX;      
+      color: white;
       .Section4Column{
         width: 100%;
       }
@@ -242,6 +243,7 @@
     // Section 5
 
     .Section5{
+      color: white;
       border-top: 1px solid #212121;
       padding-top: 50px;
       margin-bottom: 50PX;      
@@ -262,6 +264,7 @@
     }
     
     .useCasesGrid{
+      color: white;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -287,6 +290,7 @@
     }
 
     .Section6{
+      color: white;
       border-top: 1px solid #212121;
       width: 100%;
       min-height: 60vh;
@@ -344,6 +348,7 @@
     }
 
     .Section7{
+      color: white;
       border-top: 1px solid #212121;
       width: 100%;
       min-height: 70vh;
@@ -400,6 +405,7 @@
     }
 
     .Section8{
+      color: white;
       width: 100%;
       min-height: 60vh;
       padding-top: 50px;
@@ -417,6 +423,7 @@
 
 
     .credits{
+      color: white;
       border-top: 1px solid #212121;
       display: flex;
       justify-content: space-between;

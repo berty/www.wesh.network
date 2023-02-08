@@ -135,55 +135,55 @@ export default function Home() {
           <div className={styles.useCasesGrid}>
             <div className={styles.useCasesColumn}>
               <div>
-                <img src="./img/DAO.png" alt="" />
+                <img src="./img/DAO.svg" alt="" />
                 <h4>DAO</h4>
               </div>
               <div>
-                <img src="./img/P2P.png" alt="" />
+                <img src="./img/P2P.svg" alt="" />
                 <h4>P2P Games</h4>
               </div>
               <div>
-                <img src="./img/GIG.png" alt="" />
+                <img src="./img/GIG.svg" alt="" />
                 <h4>Gig Economy</h4>
               </div>
               <div>
-                <img src="./img/OPEN.png" alt="" />
+                <img src="./img/OPEN.svg" alt="" />
                 <h4>Open Source Projects</h4>
               </div>
             </div>
             <div className={styles.useCasesColumn}>
               <div>
-                <img src="./img/DAPP.png" alt="" />
+                <img src="./img/DAPP.svg" alt="" />
                 <h4>DAPP</h4>
               </div>
               <div>
-                <img src="./img/FREELANCE.png" alt="" />
+                <img src="./img/FREELANCE.svg" alt="" />
                 <h4>Freelance Business</h4>
               </div>
               <div>
-                <img src="./img/SHARING.png" alt="" />
+                <img src="./img/SHARING.svg" alt="" />
                 <h4>Sharing Economy</h4>
               </div>
               <div>
-                <img src="./img/VOLUN.png" alt="" />
+                <img src="./img/VOLUN.svg" alt="" />
                 <h4>Volunteer Projects</h4>
               </div>
             </div>
             <div className={styles.useCasesColumn}>
               <div>
-                <img src="./img/DEFI.png" alt="" />
+                <img src="./img/DEFI.svg" alt="" />
                 <h4>DEFI 2.0</h4>
               </div>
               <div>
-                <img src="./img/SOCIAL.png" alt="" />
+                <img src="./img/SOCIAL.svg" alt="" />
                 <h4>Social Reputation Business</h4>
               </div>
               <div>
-                <img src="./img/COM.png" alt="" />
+                <img src="./img/COM.svg" alt="" />
                 <h4>Community Economy</h4>
               </div>
               <div>
-                <img src="./img/DEV.png" alt="" />
+                <img src="./img/DEV.svg" alt="" />
                 <h4>Developers Community</h4>
               </div>
             </div>

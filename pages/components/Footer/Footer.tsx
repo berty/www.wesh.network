@@ -3,7 +3,8 @@ const Footer = () => {
   return (
     <div className={styles.Footer}>
       <div className={styles.left}>
-        <img src="../../img/Footer.png" alt="" />
+        <img className={styles.logo} src="./img/NavBarLogo.png" alt="" />
+        {/*<img src="../../img/Footer.png" alt="" />*/}
         <p>
           WESH Network is an open source wild & asynchronous mesh network
           protocol powered by Berty Technologies’s non-profit organisation.

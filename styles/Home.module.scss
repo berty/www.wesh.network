@@ -42,17 +42,17 @@
       letter-spacing: -0.04em;
       margin-bottom: 25px;
     }
-    
+
     h3{
       font-weight: 500;
       font-size: 25px;
       letter-spacing: -0.03em;
       margin-bottom: 12px;
     }
-    
+
     p{
       font-weight: 400;
-      font-size: 14px; 
+      font-size: 14px;
       opacity: 0.48;
       margin-bottom: 43px;
     }
@@ -96,7 +96,7 @@
     max-height: 620px;
     border: 1px solid black;
 
-    
+
     .Section2Card{
       width: 80%;
       height: 90%;
@@ -169,6 +169,7 @@
   h3{
   font-weight: 400;
   font-size: 25px;
+  color: white;
   }
 }
 
@@ -200,18 +201,34 @@
   }
   .gridIconRow{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
     gap: 32px;
+    max-width: 224px;
+
     h3{
       font-weight: 400;
     font-size: 18px;
+    }
+    img{
+      max-width: 96px;
+    }
+    h4{
+      letter-spacing: -0.03em;
+      font-weight: 500;
+      font-size: 25px;
+    }
+    p{
+      opacity: 0.48;
+      font-weight: 300;
+      font-size: 14px;
     }
   }
 }
 }
 
     // Section 4
-    
+
     .Section4{
       border-top: 1px solid #212121;
       width: 100%;
@@ -220,7 +237,7 @@
       flex-direction: column;
       align-items: center;
       padding-top: 50px;
-      margin-bottom: 50PX;      
+      margin-bottom: 50PX;
       color: white;
       .Section4Column{
         width: 100%;
@@ -246,7 +263,7 @@
       color: white;
       border-top: 1px solid #212121;
       padding-top: 50px;
-      margin-bottom: 50PX;      
+      margin-bottom: 50PX;
       h2{
         font-weight: 300;
         font-size: 48px;
@@ -262,7 +279,7 @@
         padding-left: 148px;
       }
     }
-    
+
     .useCasesGrid{
       color: white;
       width: 100%;
@@ -281,7 +298,7 @@
           img{
             max-width: 72px;
           }
-          h4{   
+          h4{
             font-weight: 400;
             font-size: 15px;
           }
@@ -387,7 +404,7 @@
             flex-direction: column;
             gap: 40px;
             div{
-              
+
               img{
                 width: 96px;
               }
@@ -443,7 +460,7 @@
         }
       }
     }
-    
+
 @media(min-width: 1200px){
   .Section7{
     .right{
@@ -531,7 +548,7 @@
   }
   .Section3Content{
     justify-content: space-evenly;
-    padding-left: 0px; 
+    padding-left: 0px;
     .gridIcon{
       justify-content: flex-end;
     }
@@ -631,7 +648,7 @@
       text-align: center;
       padding-left: 0px;
     }
-    
+
   }
   .Section3Content{
     gap: 40px;
@@ -653,13 +670,13 @@
     }
     .gridIconRow{
       display: flex;
-      align-items: center;
+      align-items: left;
       gap: 18px;
     }
   }
   }
 
-  
+
 .Section2 {
   width: 100%;
   height: 100vh;
@@ -679,7 +696,7 @@
     max-height: 620px;
     border: 1px solid black;
 
-    
+
     .Section2Card{
       width: 80%;
       height: 90%;
@@ -733,7 +750,7 @@
       h1{
         font-size: 70px;
       }
-      
+
       h3{
         font-size: 20px;
       }
@@ -783,7 +800,7 @@
       }
     }
   }
-  
+
   .Section5{
     h2{
       font-size: 30px;
@@ -833,7 +850,7 @@
         h1{
           font-size: 40px;
         }
-        
+
         h3{
           font-size: 18px;
         }
@@ -903,7 +920,7 @@
           color: #A8FF93;
         }
       }
-    
+
       h3{
       font-weight: 400;
       font-size: 18px;
@@ -927,10 +944,10 @@
           margin-bottom: 20px;
           width: 70%;
         }
-  
+
     }
 
-    // SECTION 5 MOBILE  
+    // SECTION 5 MOBILE
     .useCasesGrid{
       padding: 10px;
       gap: 5px;
@@ -950,7 +967,7 @@
           img{
             max-width: 50px;
           }
-          h4{   
+          h4{
             font-weight: 400;
             font-size: 13px;
           }
@@ -958,7 +975,7 @@
       }
     }
 
-    // SECTION 6 MOBILE 
+    // SECTION 6 MOBILE
 
     .Section7{
       .Section7Left{
@@ -1024,4 +1041,3 @@
   }
 
 }
-

@@ -5,23 +5,23 @@ const AccordionGrid = () => {
   return (
     <div className={styles.Container}>
       <Accordion
-        title="Is WESH integratable to my existing website/ app/ business/ platform ?"
+        title="Is Wesh integratable to my existing website/ app/ business/ platform ?"
         text="To create an easy-to-use technical and organizational platform, making blockchain accessible to everyone, empowering both personal and professional lives."
       />
       <Accordion
-        title="Is WESH compatible with Blockchain Technologies?"
+        title="Is Wesh compatible with Blockchain Technologies?"
         text="To create an easy-to-use technical and organizational platform, making blockchain accessible to everyone, empowering both personal and professional lives."
       />
       <Accordion
-        title="Is WESH ready for market?"
+        title="Is Wesh ready for market?"
         text="To create an easy-to-use technical and organizational platform, making blockchain accessible to everyone, empowering both personal and professional lives."
       />
       <Accordion
-        title="Is WESH too good to be true?"
+        title="Is Wesh too good to be true?"
         text="To create an easy-to-use technical and organizational platform, making blockchain accessible to everyone, empowering both personal and professional lives."
       />
       <Accordion
-        title="Why WESH?"
+        title="Why Wesh?"
         text="To create an easy-to-use technical and organizational platform, making blockchain accessible to everyone, empowering both personal and professional lives."
       />
       <Accordion

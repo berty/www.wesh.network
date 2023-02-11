@@ -144,7 +144,7 @@ export default function Home() {
             <div className={styles.CardGrid}>
               <Card
                 title="Future-proof"
-                text="With the power of decentralisation, be confident your service cannot be taken down or censored "
+                text="With the power of decentralisation, be confident your service cannot be taken down or censored"
                 image="./img/Card1.png"
               />
               <Card
@@ -154,7 +154,7 @@ export default function Home() {
               />
               <Card
                 title="Open"
-                text="Open source project that brings free to use tools with +4 years of research & development to the public."
+                text="Open source project that brings free to use tools with +4 years of research & development to the public"
                 image="./img/Card3.png"
               />
             </div>

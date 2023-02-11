@@ -62,7 +62,7 @@ export default function Home() {
           <div className={styles.left}>
             <div className={styles.Section6Text}>
               <h3 className={styles.green}>RESILIENT</h3>
-              <h2>Wesh's p2p toolkit has you covered</h2>
+              <h2>Wesh&apos;s p2p toolkit has you covered</h2>
             </div>
             <div className={styles.Section6Grid}>
               <div className={styles.Section6Card}>
@@ -325,8 +325,8 @@ export default function Home() {
             {/* <img src="./img/Around.png" alt="" /> */ }
             {/* <img src="./img/Linkedin.png" alt="" /> */ }
             {/* <img src="./img/Reddit.png" alt="" /> */ }
-            <a href="https://crpt.fyi/berty-discord" target="_blank"> <img src="./img/Discord.png" alt="" /></a>
-            <a href="https://github.com/berty/weshnet/" target="_blank"><img src="./img/Git.png" alt="" /></a>
+            <a href="https://crpt.fyi/berty-discord" rel="noreferrer" target="_blank"> <img src="./img/Discord.png" alt="" /></a>
+            <a href="https://github.com/berty/weshnet/" rel="noreferrer" target="_blank"><img src="./img/Git.png" alt="" /></a>
           </div>
         </div>
       </main>

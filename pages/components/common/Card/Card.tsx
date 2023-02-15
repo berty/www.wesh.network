@@ -15,10 +15,10 @@ const Card = ({ title, text, image }: CardProps) => {
         <h3>{title}</h3>
         <p>{text}</p>
       </div>
-      <div className={styles.CardLink}>
-        <h3>Join our ecosystem</h3>
-        <Button image="../../img/arrow.png" style="Navbar" />
-      </div>
+      {/* <div className={styles.CardLink}> */}
+        {/* <h3>Join our ecosystem</h3> */}
+        {/* <Button image="../../img/arrow.png" style="Navbar" /> */}
+      {/* </div> */}
     </div>
   );
 };

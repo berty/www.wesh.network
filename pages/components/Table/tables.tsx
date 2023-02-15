@@ -7,49 +7,40 @@ const Table = () => {
         <tbody>
           <tr>
             <td></td>
-            <td className={styles.grey}>{"Ethereum+Metis ( Layer 1)"}</td>
-            <td>{"Ethereum+Metis ( Layer 2)"}</td>
+            <td className={styles.grey}>{"Ethereum"}</td>
+            <td>{"Wesh network"}</td>
           </tr>
           <tr>
-            <td>Transaction cost</td>
+            <td>Peer-to-peer</td>
+            <td className={styles.grey}>✔</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>Transmission costs</td>
             <td className={styles.grey}>High</td>
-            <td>Low</td>
+            <td>Zero</td>
           </tr>
           <tr>
-            <td>Transaction Speed</td>
-            <td className={styles.grey}>Slow</td>
-            <td>Fast</td>
+            <td>Consensus</td>
+            <td className={styles.grey}>Yes</td>
+            <td>No</td>
           </tr>
           <tr>
-            <td>Functionality</td>
+            <td>Modularity</td>
             <td className={styles.grey}>Limited</td>
-            <td>Rich</td>
+            <td>High</td>
           </tr>
           <tr>
-            <td>Usability</td>
-            <td className={styles.grey}>Difficult</td>
-            <td>Easy</td>
+            <td>Nodes</td>
+            <td className={styles.grey}>Heavy & rewarded</td>
+            <td>Light & unrewarded</td>
           </tr>
           <tr>
-            <td>Affordable storage</td>
-            <td className={styles.grey}>None</td>
-            <td>Native</td>
+            <td>Cryptography</td>
+            <td className={styles.grey}>Keccak256 & secp256k1</td>
+            <td>Ed25519 & X25519</td>
           </tr>
-          <tr>
-            <td>Scalability</td>
-            <td className={styles.grey}>Expensive</td>
-            <td>Effective</td>
-          </tr>
-          <tr>
-            <td>DAO quickstart</td>
-            <td className={styles.grey}>No</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Your app</td>
-            <td className={styles.grey}>Blochain, chained</td>
-            <td>Blockchain, unchained</td>
-          </tr>
+
         </tbody>
       </table>
     </div>

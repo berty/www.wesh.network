@@ -26,7 +26,7 @@ export default function Home() {
             <div>
               <h1>Async mesh network protocol</h1>
               <h3>Decentralized Extreme Communication Protocol</h3>
-              <p>WESH SDK allows developers to build their p2p app easily.</p>
+              <p>Wesh SDK allows developers to build their p2p app easily.</p>
               <Button
                 text="Get Started"
                 image="./img/blackArrow.png"
@@ -42,15 +42,15 @@ export default function Home() {
           <div className={styles.Section2Container}>
             <div className={styles.Section2Card}>
               <div className={styles.Section2Img}>
-                <img src="./img/LogoCubes.png" alt="" />
+                <img src="./img/LogoCubes.svg" alt="" />
               </div>
               <div className={styles.Section2Text}>
                 <h2>Safe and Secure</h2>
                 <p>
-                  WESH provides a secured, distributed and asynchronous
+                  Wesh provides a secured, distributed and asynchronous
                   communication protocol, both with or without internet access
                   using IPFS and direct transports such as BLE and proximity
-                  drivers. <br /> <br /> WESH Protocol provides end-to-end
+                  drivers. <br /> <br /> Wesh Protocol provides end-to-end
                   encryption and perfect forward secrecy for all the exchanged
                   messages
                 </p>
@@ -58,43 +58,77 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className={styles.Section6}>
+          <div className={styles.left}>
+            <div className={styles.Section6Text}>
+              <h3 className={styles.green}>RESILIENT</h3>
+              <h2>Wesh&apos;s p2p toolkit has you covered</h2>
+            </div>
+            <div className={styles.Section6Grid}>
+              <div className={styles.Section6Card}>
+                <img src="./img/Resilient.png" alt="" />
+                <h4>Resilient</h4>
+                <p>
+                  Distributed p2p transmissions and hosting over IPFS powered by CRDT algorithm
+                </p>
+              </div>
+              <div className={styles.Section6Card}>
+                <img src="./img/Secured.png" alt="" />
+                <h4>Secure</h4>
+                <p>
+                  Efficient end-to-end encryption and perfect forward secrecy to prevent eavesdropping and provide reliable identity access management
+                </p>
+              </div>
+              <div className={styles.Section6Card}>
+                <img src="./img/Interoperability.png" alt="" />
+                <h4>Interoperable</h4>
+                <p>
+                  Powered by Go, and Operable on iOS and Android devices
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.right}>
+            <img src="./img/imgSection6.png" alt="" />
+          </div>
+        </section>
         <section className={styles.Section3}>
           <div className={styles.Section3Title}>
             <h2>
               <span className={styles.white}>Wesh</span>{" "}
               <span className={styles.grey}>=</span>{" "}
-              <span className={styles.green}>No Consensus</span>
+              <span className={styles.green}>Flexible </span>
+              <span className={styles.grey}>+</span>{" "}
+              <span className={styles.green}>Future proof </span>
+              <span className={styles.grey}>+</span>{" "}
+              <span className={styles.green}>Free</span>
             </h2>
-            <h3>Wesh Protocol doesn’t need any blockchain</h3>
+            <h3>Focus on buildling, we handle the peer-to-peer</h3>
           </div>
           <div className={styles.Section3Content}>
             <div className={styles.gridIcon}>
               <div className={styles.gridIconColumn}>
                 <div className={styles.gridIconRow}>
                   <img src="./img/Asynchronous.png" alt="" />
-                  <h3>Asynchronous</h3>
+                  <h3>Identity management</h3>
+                  <p>Distributed authentication and authorisation. Multiple devices per identity</p>
                 </div>
                 <div className={styles.gridIconRow}>
                   <img src="./img/Interoperability.png" alt="" />
-                  <h3>Interoperability</h3>
-                </div>
-                <div className={styles.gridIconRow}>
-                  <img src="./img/Resilient.png" alt="" />
-                  <h3>Resilient</h3>
+                  <h3>Groups</h3>
+                  <p>Resilient p2p transmissions between groups of mutually-authorised users</p>
                 </div>
               </div>
               <div className={styles.gridIconColumn}>
                 <div className={styles.gridIconRow}>
                   <img src="./img/SelfHosted.png" alt="" />
-                  <h3>SelfHosted</h3>
+                  <h3>Offline communication</h3>
+                  <p>Offline peer to peer communication over Bluetooth Low Energy </p>
                 </div>
                 <div className={styles.gridIconRow}>
                   <img src="./img/No server.png" alt="" />
-                  <h3>No server</h3>
-                </div>
-                <div className={styles.gridIconRow}>
-                  <img src="./img/Secured.png" alt="" />
-                  <h3>Secured</h3>
+                  <h3>RDV servers</h3>
+                  <p>Improved performance and availability with decentralised rendez-vous servers</p>
                 </div>
               </div>
             </div>
@@ -105,32 +139,74 @@ export default function Home() {
         <section className={styles.Section4}>
           <div className={styles.Section4Column}>
             <h2>
-              Why <span className={styles.green}>Wesh</span> is so different?
+              Why <span className={styles.green}>Wesh</span> is for you?
             </h2>
             <div className={styles.CardGrid}>
               <Card
-                title="On top of IPFS protocol"
-                text="Fully decentralized, WESH allows to build serverless applications using IPFS, even on mobiles apps."
+                title="Future-proof"
+                text="With the power of decentralisation, be confident your service cannot be taken down or censored"
                 image="./img/Card1.png"
               />
               <Card
-                title="App developers"
-                text="Made by & for developers that need to build resilient, autonomous and secured decentralized applications."
+                title="Designed for builders"
+                text="Get started in a heartbeat. Download our repo and read our documentation to get onboarded"
                 image="./img/Card2.png"
               />
               <Card
-                title="Everyone"
-                text="Open source project that bring free to use tools with +4 years of research & development to the commons."
+                title="Open"
+                text="Open source project that brings free to use tools with +4 years of research & development to the public"
                 image="./img/Card3.png"
               />
             </div>
           </div>
         </section>
+        <section className={styles.Section4}>
+          <div className={styles.Section4Column}>
+            <h2>
+              Find your <span className={styles.green}>use case</span>
+            </h2>
+
+            <div className={styles.CardGrid}>
+              <Card
+                title="Messaging"
+                text="Just like berty messenger, develop your own private p2p messaging mobile applications "
+                image="./img/berty.svg"
+              />
+              <Card
+                title="Offline communication"
+                text="When internet is down, your application can thrive"
+                image="./img/OPEN.svg"
+              />
+              <Card
+                title="Social"
+                text="Build the dating app that doesn’t stalk its users"
+                image="./img/Com.svg"
+              />
+            </div>
+            <div className={styles.CardGrid}>
+              <Card
+                title="Collaboration"
+                text="Make your users truly own the whiteboard they collaborate on"
+                image="./img/Colab.svg"
+              />
+              <Card
+                title="IoT"
+                text="Ignite IoT networks that can share information such as air quality when traditional connectivity fails"
+                image="./img/IOT.svg"
+              />
+              <Card
+                title="Offgrid"
+                text="Create reliable communication channels with third parties in remote locations"
+                image="./img/Volun.svg"
+              />
+            </div>
+          </div>
+        </section>
+        {/*
         <section className={styles.Section5}>
-          <h2>Find your use cases</h2>
+          <h2>Find your <span className={styles.green}>use case</span></h2>
           <h3>
-            In the near future, anyone, anywhere, can thrive in the
-            decentralized economy with metis
+            Limitless possiblities, up to your imagination
           </h3>
           <div className={styles.useCasesGrid}>
             <div className={styles.useCasesColumn}>
@@ -139,8 +215,8 @@ export default function Home() {
                 <h4>DAO</h4>
               </div>
               <div>
-                <img src="./img/P2P.svg" alt="" />
-                <h4>P2P Games</h4>
+                <img src="./img/p2p.svg" alt="" />
+                <h4>p2p Games</h4>
               </div>
               <div>
                 <img src="./img/GIG.svg" alt="" />
@@ -157,8 +233,8 @@ export default function Home() {
                 <h4>DAPP</h4>
               </div>
               <div>
-                <img src="./img/FREELANCE.svg" alt="" />
-                <h4>Freelance Business</h4>
+                <img src="./img/berty.svg" alt="" />
+                <h4>Messaging</h4>
               </div>
               <div>
                 <img src="./img/SHARING.svg" alt="" />
@@ -189,51 +265,12 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={styles.Section6}>
-          <div className={styles.left}>
-            <div className={styles.Section6Text}>
-              <h3 className={styles.green}>BELIEF</h3>
-              <h2>Anyone, anywhere, can thrive in the decentralized economy</h2>
-            </div>
-            <div className={styles.Section6Grid}>
-              <div className={styles.Section6Card}>
-                <img src="./img/Vision.png" alt="" />
-                <h4>Vision</h4>
-                <p>
-                  To accelerate the transition of people to blockchain for open,
-                  fair, and decentralized business on Web 3.0.
-                </p>
-              </div>
-              <div className={styles.Section6Card}>
-                <img src="./img/Mission.png" alt="" />
-                <h4>Mission</h4>
-                <p>
-                  To create an easy-to-use technical and organizational
-                  platform, making blockchain accessible to everyone, empowering
-                  both personal and professional lives.
-                </p>
-              </div>
-              <div className={styles.Section6Card}>
-                <img src="./img/Buisness.png" alt="" />
-                <h4>Business</h4>
-                <p>
-                  Metis is a decentralized economy platform to start, run, and
-                  grow any decentralized app, business, and community on the
-                  blockchain with ease and scalability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.right}>
-            <img src="./img/imgSection6.png" alt="" />
-          </div>
-        </section>
         <section className={styles.Section7}>
           <div className={styles.Section7Left}>
             <div className={styles.Section7Text}>
               <h2>Education</h2>
               <h3>
-                WESH is building more than just a layer 2 solution: Get an
+                Wesh is building more than just a layer 2 solution: Get an
                 overview of everything.
               </h3>
             </div>
@@ -272,22 +309,24 @@ export default function Home() {
             <img src="./img/imgSection7.png" alt="" />
           </div>
         </section>
+
         <section className={styles.Section8}>
           <h2>Frequently asked questions</h2>
           <AccordionGrid />
         </section>
+        */}
         <Footer />
         <div className={styles.credits}>
           <p>Copyright © 2022 – Berty.Tech non-profit organization</p>
           <div>
-            <img src="./img/Telegram.png" alt="" />
-            <img src="./img/Twitter.png" alt="" />
-            <img src="./img/Discord.png" alt="" />
-            <img src="./img/Instagram.png" alt="" />
-            <img src="./img/Around.png" alt="" />
-            <img src="./img/Linkedin.png" alt="" />
-            <img src="./img/Git.png" alt="" />
-            <img src="./img/Reddit.png" alt="" />
+            {/* <img src="./img/Telegram.png" alt="" /> */ }
+            {/* <img src="./img/Twitter.png" alt="" /> */ }
+            {/* <img src="./img/Instagram.png" alt="" /> */ }
+            {/* <img src="./img/Around.png" alt="" /> */ }
+            {/* <img src="./img/Linkedin.png" alt="" /> */ }
+            {/* <img src="./img/Reddit.png" alt="" /> */ }
+            <a href="https://crpt.fyi/berty-discord" rel="noreferrer" target="_blank"> <img src="./img/Discord.png" alt="" /></a>
+            <a href="https://github.com/berty/weshnet/" rel="noreferrer" target="_blank"><img src="./img/Git.png" alt="" /></a>
           </div>
         </div>
       </main>

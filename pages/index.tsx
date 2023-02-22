@@ -20,13 +20,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.Body}>
-        <Navbar />
+        {/* }<Navbar /> */}
         <section className={styles.Section1}>
           <div className={styles.MainTitle}>
             <div>
               <h1>Async mesh network protocol</h1>
-              <h3>Decentralized Extreme Communication Protocol</h3>
-              <p>Wesh SDK allows developers to build their p2p app easily.</p>
+              <h3>With wesh's toolkit, building p2p apps has never been simpler</h3>
+              <p>Wesh network is a decentralized extreme communication protocol</p>
               <Button
                 text="Get Started"
                 image="./img/blackArrow.png"
@@ -154,7 +154,7 @@ export default function Home() {
               />
               <Card
                 title="Open"
-                text="Open source project that brings free to use tools with +4 years of research & development to the public"
+                text="Open source project that brings free to use tools with 4+ years of research & development to the public"
                 image="./img/Card3.png"
               />
             </div>

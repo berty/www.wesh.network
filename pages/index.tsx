@@ -25,7 +25,7 @@ export default function Home() {
           <div className={styles.MainTitle}>
             <div>
               <h1>Async mesh network protocol</h1>
-              <h3>With wesh&apos;s toolkit, building p2p apps has never been simpler</h3>
+              <h3>With Wesh&apos;s toolkit, building p2p apps has never been simpler</h3>
               <p>Wesh network is a decentralized extreme communication protocol</p>
               <Button
                 text="Get Started"

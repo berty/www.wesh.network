@@ -174,7 +174,7 @@ export default function Home() {
               />
               <Card
                 title="Offline communication"
-                text="When internet is down, your application can thrive"
+                text="When the internet is down, your application can thrive"
                 image="./img/OPEN.svg"
               />
               <Card

@@ -22,7 +22,7 @@ const Navbar = () => {
           <img src="/img/NavBarLogo.png" alt="" />
         </Link>
         <div className={styles.Links}>
-          <a href="/blog">Blog</a>
+          <Link href="/blog">Blog</Link>
         </div>
         <div className={styles.Burger}>
           <Button
@@ -38,7 +38,7 @@ const Navbar = () => {
           <Button image="/img/Cross.png" style="Navbar" onclick={handleOpen} />
         </div>
         <div className={styles.LinksMobile}>
-          <a href="/blog">Blog</a>
+          <Link href="/blog">Blog</Link>
         </div>
         <div className={styles.credits}>
           <p>Copyright © 2023 – Berty.Tech non-profit organization</p>

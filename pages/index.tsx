@@ -20,12 +20,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.Body}>
-        {/* }<Navbar /> */}
+        <Navbar />
         <section className={styles.Section1}>
           <div className={styles.MainTitle}>
             <div>
               <h1>Async mesh network protocol</h1>
-              <h3>With wesh&apos;s toolkit, building p2p apps has never been simpler</h3>
+              <h3>With Wesh&apos;s toolkit, building p2p apps has never been simpler</h3>
               <p>Wesh network is a decentralized extreme communication protocol</p>
               <Button
                 text="Get Started"
@@ -174,7 +174,7 @@ export default function Home() {
               />
               <Card
                 title="Offline communication"
-                text="When internet is down, your application can thrive"
+                text="When the internet is down, your application can thrive"
                 image="./img/OPEN.svg"
               />
               <Card
@@ -317,7 +317,7 @@ export default function Home() {
         */}
         <Footer />
         <div className={styles.credits}>
-          <p>Copyright © 2022 – Berty.Tech non-profit organization</p>
+          <p>Copyright © 2023 – Berty.Tech non-profit organization</p>
           <div>
             {/* <img src="./img/Telegram.png" alt="" /> */ }
             {/* <img src="./img/Twitter.png" alt="" /> */ }

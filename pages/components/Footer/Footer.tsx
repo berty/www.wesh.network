@@ -6,7 +6,7 @@ const Footer = () => {
         <img className={styles.logo} src="./img/NavBarLogo.png" alt="" />
         {/*<img src="../../img/Footer.png" alt="" />*/}
         <p>
-          WESH Network is an open source wild & asynchronous mesh network
+          Wesh Network is an open source, wild & asynchronous mesh network
           protocol powered by Berty Technologies’ non-profit organisation.
         </p>
       </div>
@@ -14,8 +14,8 @@ const Footer = () => {
         <div>
           <h4>ABOUT US</h4>
           <a rel="noreferrer" target="_blank" href="https://berty.tech/about">Berty.Tech</a>
-          {/* <a href="">Careers</a>
-          <a href="">Developers</a>
+          <a href="/blog">Blog</a>
+          {/*}<a href="">Developers</a>
           <a href="">Bug bounty</a>
           <a href="">Media kit</a>
         </div>

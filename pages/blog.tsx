@@ -33,7 +33,7 @@ export default function Blogpage() {
           image={posts.items[i].img}
           url={posts.items[i].id}
          />
-      var post2 = ""
+      var post2 = <></>
       if(posts.items[i+1] != undefined){
       post2 = <BlogCard
         key={i}
@@ -44,7 +44,7 @@ export default function Blogpage() {
         url={posts.items[i+1].id}
        />
      }
-      var post3 = ""
+      var post3 = <></>
       if(posts.items[i+2] != undefined){
         post3=
         <BlogCard
@@ -56,7 +56,7 @@ export default function Blogpage() {
           url={posts.items[i+2].id}
          />
       }
-      var title="";
+      var title=<></>;
       if(i == 0){
         title =
         <h2>

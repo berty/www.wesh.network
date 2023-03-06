@@ -1,4 +1,3 @@
-import { getPostIdList } from '../components/Blog/blog';
 import Head from "next/head";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
@@ -9,7 +8,7 @@ import parse from 'html-react-parser';
 
 
 
-export default function Post({ postData }) {
+export default function Post() {
   let posts;
   posts =  (content.items[0])
   console.log(posts)

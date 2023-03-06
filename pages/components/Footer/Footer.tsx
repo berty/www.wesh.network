@@ -1,4 +1,5 @@
 import styles from "./Footer.module.scss";
+import Link from "next/link";
 const Footer = () => {
   return (
     <div className={styles.Footer}>
@@ -14,8 +15,8 @@ const Footer = () => {
         <div>
           <h4>ABOUT US</h4>
           <a rel="noreferrer" target="_blank" href="https://berty.tech/about">Berty.Tech</a>
-          {/* <a href="">Careers</a>
-          <a href="">Developers</a>
+          <Link href="/blog">Blog</Link>
+          {/*}<a href="">Developers</a>
           <a href="">Bug bounty</a>
           <a href="">Media kit</a>
         </div>

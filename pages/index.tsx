@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Card from "./components/common/Card/Card";
 import AccordionGrid from "./components/AccordionGrid/AccordionGrid";
 import Footer from "./components/Footer/Footer";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,11 +28,13 @@ export default function Home() {
               <h1>Async mesh network protocol</h1>
               <h3>With Wesh&apos;s toolkit, building p2p apps has never been simpler</h3>
               <p>Wesh network is a decentralized extreme communication protocol</p>
-              <Button
-                text="Get Started"
-                image="./img/blackArrow.png"
-                style="primary"
-              />
+              <a target="_blank" href="https://github.com/berty/weshnet/" rel="noopener noreferrer">
+                <Button
+                  text="Get Started"
+                  image="./img/blackArrow.png"
+                  style="primary"
+                />
+              </a>
             </div>
           </div>
           <div className={styles.HomeImage}>

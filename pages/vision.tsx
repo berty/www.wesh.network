@@ -55,15 +55,15 @@ export default function Home() {
             </div>
             <div className={styles.Section6Grid}>
 
-              <p className={styles.space}>Wesh Network is poised to become a key component of the alternate Internet, powering numerous decentralized systems such as blockchains, messaging apps, dApps, and social tools. As such, our toolkit will become a fundamental component of the Web3 builder's workshop.</p>
+              <p className={styles.space}>Wesh Network is poised to become a key component of the alternate Internet, powering numerous decentralized systems such as blockchains, messaging apps, dApps, and social tools. As such, our toolkit will become a fundamental component of the Web3 builder&apos;s workshop.</p>
             </div>
             <div className={styles.Section6Grid}>
 
-              <p className={styles.space}>Through collaborations and integrations with other related projects that follow a decentralized approach, our protocol will reach new heights of capability and performance. We've partnered with governments, innovators in the web3 space, or military forces, who plan to implement Wesh Protocol to build secure and resilient communication tools for extreme contexts.</p>
+              <p className={styles.space}>Through collaborations and integrations with other related projects that follow a decentralized approach, our protocol will reach new heights of capability and performance. We&apos;ve partnered with governments, innovators in the web3 space, or military forces, who plan to implement Wesh Protocol to build secure and resilient communication tools for extreme contexts.</p>
             </div>
             <div className={styles.Section6Grid}>
 
-              <p className={styles.space}>The Wesh Network protocol is designed to offer unparalleled resilience coupled with interoperability, security, and modularity. Humanity deserves access to free, reliable and censorship-resistant communication. Berty is building the Wesh Network to fulfill this mission and become the foundation of unstoppable communication for the Internet's next era.</p>
+              <p className={styles.space}>The Wesh Network protocol is designed to offer unparalleled resilience coupled with interoperability, security, and modularity. Humanity deserves access to free, reliable and censorship-resistant communication. Berty is building the Wesh Network to fulfill this mission and become the foundation of unstoppable communication for the Internet&apos;s next era.</p>
             </div>
           </div>
           <div className={styles.right}>

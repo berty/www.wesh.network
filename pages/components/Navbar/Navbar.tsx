@@ -21,8 +21,9 @@ const Navbar = () => {
         <Link href="/">
           <img src="/img/NavBarLogo.png" alt="" />
         </Link>
-        
+
         <div className={styles.Links}>
+          <Link href="/vision">Vision</Link>
           <Link href="/blog">Blog</Link>
         </div>
 
@@ -41,20 +42,15 @@ const Navbar = () => {
         </div>
 
         <div className={styles.LinksMobile}>
+          <Link href="/vision">Vision</Link>
           <Link href="/blog">Blog</Link>
         </div>
 
         <div className={styles.credits}>
           <p>Copyright © 2023 – Berty.Tech non-profit organization</p>
           <div>
-            <img src="/img/Telegram.png" alt="" />
-            <img src="/img/Twitter.png" alt="" />
             <img src="/img/Discord.png" alt="" />
-            <img src="/img/Instagram.png" alt="" />
-            <img src="/img/Around.png" alt="" />
-            <img src="/img/Linkedin.png" alt="" />
             <img src="/img/Git.png" alt="" />
-            <img src="/img/Reddit.png" alt="" />
           </div>
         </div>
       </div>

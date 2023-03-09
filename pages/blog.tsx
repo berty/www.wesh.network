@@ -60,7 +60,7 @@ export default function Blogpage() {
       if(i == 0){
         title =
         <h2>
-          <span className={styles.green}>Blog</span>
+          <span className={styles.green}>BLOG</span>
         </h2>
       }
       resultsRender.push(

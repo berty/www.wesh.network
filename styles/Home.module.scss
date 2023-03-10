@@ -19,6 +19,10 @@
   color: #A8FF93;
 }
 
+.space{
+  margin-bottom: 20px;
+}
+
 /* Section 1 */
 
 .Section1 {
@@ -420,6 +424,10 @@
           display: flex;
           gap: 60px;
           justify-content: flex-start;
+
+          p{
+            color: #bdbdbd;
+          }
         }
         .Section6Card{
           max-width: 224px;
@@ -674,7 +682,8 @@
     .left{
       width: 100%;
       .Section6Grid{
-        padding-left: 0px;
+        padding-left: 148px;
+        padding-right: 148px;
         display: flex;
         gap: 40px;
         justify-content: center;
@@ -848,7 +857,6 @@
 
   .Section6{
     width: 100%;
-    min-height: 100vh;
     display: flex;
     .left{
       align-items: center;
@@ -864,11 +872,15 @@
         }
       }
       .Section6Grid{
-        padding-left: 0px;
+        padding-left: 148px;
+        padding-right: 148px;
         gap: 40px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        p{
+          color: #bdbdbd;
+        }
       }
       .Section6Card{
         align-items: center;
@@ -1055,6 +1067,14 @@
     }
 
     // SECTION 6 MOBILE
+    .Section6{
+      .left{
+        .Section6Grid{
+          padding-left: 35px;
+          padding-right: 30px;
+        }
+      }
+    }
 
     .Section7{
       .Section7Left{

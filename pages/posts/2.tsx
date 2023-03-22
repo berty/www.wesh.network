@@ -9,9 +9,7 @@ import "prismjs/components/prism-go";
 import "prismjs/components/prism-bash";
 
 export default function Post() {
-  let posts
-  posts = content.items[1]
-  console.log(posts)
+  const posts =  (content.items.find(i => i.id === "2"))
 
   React.useEffect(() => {
     const highlight = async () => {
@@ -19,6 +17,8 @@ export default function Post() {
     }
     highlight() // <--- call the async function
   }, [])
+
+	if (!posts) return <span>Not found</span>
 
   return (
     <>

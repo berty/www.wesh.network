@@ -33,7 +33,7 @@ export default function Post() {
                   {parse(posts.content)}
                 </p>
                 <p>
-                  <i>Posted by {posts.author} on the {posts.pubDate}</i>
+                  <i>Posted by {posts.author} on {posts.pubDate}</i>
                 </p>
               </div>
             </div>

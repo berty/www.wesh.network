@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import "prismjs/themes/prism-tomorrow.css";
+
+import "highlight.js/styles/atom-one-dark.css";
 
 
 export default function App({ Component, pageProps }: AppProps) {

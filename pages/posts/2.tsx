@@ -3,22 +3,20 @@ import Navbar from "../components/Navbar/Navbar"
 import Footer from "../components/Footer/Footer"
 import styles from "../../styles/Home.module.scss"
 import content from "./content.json"
-import Prism from "prismjs"
 import React from "react"
-import "prismjs/components/prism-go";
-import "prismjs/components/prism-bash";
+import hljs from "highlight.js"
 
 export default function Post() {
-  const posts =  (content.items.find(i => i.id === "2"))
+  const posts = content.items.find((i) => i.id === "2")
 
   React.useEffect(() => {
     const highlight = async () => {
-      await Prism.highlightAll() // <--- prepare Prism
+      await hljs.highlightAll()
     }
-    highlight() // <--- call the async function
+    highlight()
   }, [])
 
-	if (!posts) return <span>Not found</span>
+  if (!posts) return <span>Not found</span>
 
   return (
     <>
@@ -56,9 +54,9 @@ cd hello
 									</code>
                 </pre>
                 <p>In your text editor, create a file hello.go in which to write your code. Paste the following code into your hello.go file.</p>
-                <pre>
+								<pre>
                   <code className="language-go">
-                    {`package main
+{`package main
 
 import (
 	"context"
@@ -70,8 +68,8 @@ import (
                   </code>
                 </pre>
                 <p>
-                  We import <code className="language-js token string">fmt</code> as usual in Go code so that we can print a message. We import <code className="language-js token string">berty.tech/weshnet</code> so that we can call the Go function to initialize the Wesh service (explained below). Finally, your
-                  app interacts with the Wesh service through gRPC which uses Protobuf messages. Therefore, we import the Wesh API Protobuf types with <code className="language-js token string">berty.tech/weshnet/pkg/protocoltypes</code>, and we import <code className="language-js token string">context</code> because all of the gRPC calls use a Go context object (explained below).
+                  We import <code>fmt</code> as usual in Go code so that we can print a message. We import <code>berty.tech/weshnet</code> so that we can call the Go function to initialize the Wesh service (explained below). Finally, your
+                  app interacts with the Wesh service through gRPC which uses Protobuf messages. Therefore, we import the Wesh API Protobuf types with <code>berty.tech/weshnet/pkg/protocoltypes</code>, and we import <code>context</code> because all of the gRPC calls use a Go context object (explained below).
                 </p>
                 <p>To complete the example, paste the following main function and save the file.</p>
                 <pre>
@@ -99,25 +97,23 @@ func main() {
                   </code>
                 </pre>
                 <p>
-                  First we use <code className="language-js token string">context.WithCancel</code> to create a <code className="language-js token string">ctx</code> object which is used in the gRPC calls, and a <code className="language-js">cancel</code> function to call
+                  First we use <code>context.WithCancel</code> to create a <code>ctx</code> object which is used in the gRPC calls, and a <code className="language-js">cancel</code> function to call
 									when the app exits. The Context type is part of the Go
                   standard library and you can read
                   <a href="https://pkg.go.dev/context" target="_blank" rel="noreferrer"> its documentation </a> for more details.
                 </p>
                 <p>
-                  Next we call <code className="language-js token string">weshnet.NewInMemoryServiceClient</code> to initialize the Wesh service and create a gRPC <code className="language-js token string">client</code> that we use to interact with it. Wesh has many init functions for different configurations. A Wesh service
+                  Next we call <code>weshnet.NewInMemoryServiceClient</code> to initialize the Wesh service and create a gRPC <code>client</code> that we use to interact with it. Wesh has many init functions for different configurations. A Wesh service
                   can run in memory with a direct connection, or as a separate process with communication through an open socket. We will discuss these options in future blog
                   posts. In this example, we initialize a Wesh service which runs in application memory with a direct connection, and creates a new in-memory user account and data
                   store. If your app doesn’t export the data, then it is lost when the app exits. (It’s also possible to create a persistent data store, which we will explore
                   later.)
                 </p>
                 <p>
-                  Finally, we interact with the Wesh service by calling <code className="language-js token string">client.ServiceGetConfiguration</code> , passing the <code className="language-js token string">ctx</code> that we created.
-                  This method gets the current configuration of the service and is{" "}
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ServiceGetConfiguration" target="_blank" rel="noreferrer">documented here</a>, along
-                  with all the other API calls. Each API call takes a Protobuf request message. In this case there are no parameters, so we create an empty <code className="language-js token string">protocoltypes.ServiceGetConfiguration_Request</code>. (We will see more complex examples later.) And each API call
-                  returns a Protobuf reply message, or sometimes a stream object. In this case it is a <a href=" https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ServiceGetConfiguration.Reply" target="_blank" rel="noreferrer">ServiceGetConfiguration.Reply</a>. So to finish, we print a happy message with
-                  the <code className="language-js token string"> PeerID</code> of the in-memory IPFS node.
+                  Finally, we interact with the Wesh service by calling <code>client.ServiceGetConfiguration</code> , passing the <code>ctx</code> that we created.
+                  This method gets the current configuration of the service and is <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ServiceGetConfiguration" target="_blank" rel="noreferrer">documented here</a>, along
+                  with all the other API calls. Each API call takes a Protobuf request message. In this case there are no parameters, so we create an empty <code>protocoltypes.ServiceGetConfiguration_Request</code>. (We will see more complex examples later.) And each API call returns a Protobuf reply message, or sometimes a stream object. In this case it is a <a href=" https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ServiceGetConfiguration.Reply" target="_blank" rel="noreferrer">ServiceGetConfiguration.Reply</a>. So to finish, we print a happy message with
+                  the <code>PeerID</code> of the in-memory IPFS node.
                 </p>
                 <p>To see the result, in a terminal enter:</p>
                 <pre>
@@ -126,16 +122,14 @@ func main() {
 go run .`}</code>
                 </pre>
                 <p>
-                  (You only need to do <code className="language-js token string">go mod tidy</code> the first time.) It should print something like{" "}
-                  <pre>
+                  (You only need to do <code>go mod tidy</code> the first time.) It should print something like{" "}
                     <code>“Hello, world! My peer ID is 12D3KooWGVMm5mum6qMtwbReiD9Aa93WTuTT2hTHsYxQASTzYUfs”.</code>
-                  </pre>
                 </p>
 
                 <p>
                   In this example, you can now see how the Wesh API can be used with other programming languages. The gRPC support provides helper functions for each language to
-                  create the Protobuf messages like <code className="language-js token string">ServiceGetConfiguration_Request</code>. And the API calls like{" "}
-                  <code className="language-js token string">ServiceGetConfiguration</code> only need these Protobuf messages which are language-independent.
+                  create the Protobuf messages like <code>ServiceGetConfiguration_Request</code>. And the API calls like{" "}
+                  <code>ServiceGetConfiguration</code> only need these Protobuf messages which are language-independent.
                 </p>
                 <p>
                   Congratulations on your first Wesh app! This one kept all the data in memory. In the next blog post, we’ll see how to create a persistent key store and IPFS node

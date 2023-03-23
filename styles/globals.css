@@ -105,3 +105,20 @@ a {
     color-scheme: dark;
   }
 }
+
+pre {
+  display: inline-block;
+  overflow-x: auto;
+}
+.code, code {
+	color: #7ec699;
+	background: #2d2d2d;
+	overflow-x: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  pre {
+		width: 89vw;
+	}
+}

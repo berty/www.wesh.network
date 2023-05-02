@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "id": "3",
+      "title": "Wesh App with Persistent Storage",
+      "pubDate": "02/05/2023",
+      "description": "In the previous blog post, we made an example “Hello world” app using the Wesh API. But it used in-memory storage for the keys and messages, which are lost when the app closes.",
+      "content": "",
+      "author": "Jeff",
+      "img": "/img/LogoCubes.svg"
+    },
+    {
       "id": "2",
       "title": "Wesh “Hello World” App",
       "pubDate": "23/03/2023",

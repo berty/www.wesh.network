@@ -19,9 +19,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Blogpage() {
   let posts = content;
-  console.log("123");
-  console.log(posts.items.length);
-  console.log("123");
   const resultsRender = []
     for (var i = 0; i < posts.items.length; i += 3) {
       var post1=

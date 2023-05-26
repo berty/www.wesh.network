@@ -1,79 +1,78 @@
-import Head from "next/head";
-import Table from "./components/Table/tables";
-import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.scss";
-import Button from "./components/common/Button/Button";
-import Navbar from "./components/Navbar/Navbar";
-import Card from "./components/common/Card/Card";
-import AccordionGrid from "./components/AccordionGrid/AccordionGrid";
-import Footer from "./components/Footer/Footer";
+import Head from "next/head"
+import Table from "./components/Table/tables"
+import { Inter } from "@next/font/google"
+import styles from "../styles/Home.module.scss"
+import Button from "./components/common/Button/Button"
+import Navbar from "./components/Navbar/Navbar"
+import Card from "./components/common/Card/Card"
+import AccordionGrid from "./components/AccordionGrid/AccordionGrid"
+import Footer from "./components/Footer/Footer"
 
-import React, { Component } from "react";
-import BlogCard from "./components/common/BlogCard/BlogCard";
+import React, { Component } from "react"
+import BlogCard from "./components/common/BlogCard/BlogCard"
 import content from "./posts/content.json"
 
-const inter = Inter({ subsets: ["latin"] });
-
-
-
+const inter = Inter({ subsets: ["latin"] })
 
 export default function Blogpage() {
-  let posts = content;
+  let posts = content
   const resultsRender = []
-    for (var i = 0; i < posts.items.length; i += 3) {
-      var post1=
-        <BlogCard
-          key={i}
-          title={posts.items[i].title}
-          text={`${
-            posts.items[i].description.substring(0, 200)}...`}
-          image={posts.items[i].img}
-          url={posts.items[i].id}
-         />
-      var post2 = <></>
-      if(posts.items[i+1] != undefined){
-      post2 = <BlogCard
+  for (var i = 0; i < posts.items.length; i += 3) {
+    var post1 = (
+      <BlogCard
         key={i}
-        title={posts.items[i+1].title}
-        text={`${
-          posts.items[i+1].description.substring(0, 200)}...`}
-        image={posts.items[i+1].img}
-        url={posts.items[i+1].id}
-       />
-     }
-      var post3 = <></>
-      if(posts.items[i+2] != undefined){
-        post3=
+        title={posts.items[i].title}
+        text={`${posts.items[i].description.substring(0, 200)}...`}
+        image={posts.items[i].img}
+        url="wesh-app-with-persistent-storage"
+      />
+    )
+    var post2 = <></>
+    if (posts.items[i + 1] != undefined) {
+      post2 = (
         <BlogCard
           key={i}
-          title={posts.items[i+2].title}
-          text={`${
-            posts.items[i+2].description.substring(0, 200)}...`}
-          image={posts.items[i+2].img}
-          url={posts.items[i+2].id}
-         />
-      }
-      var title=<></>;
-      if(i == 0){
-        title =
+          title={posts.items[i + 1].title}
+          text={`${posts.items[i + 1].description.substring(0, 200)}...`}
+          image={posts.items[i + 1].img}
+          url="wesh-hello-world-app"
+        />
+      )
+    }
+    var post3 = <></>
+    if (posts.items[i + 2] != undefined) {
+      post3 = (
+        <BlogCard
+          key={i}
+          title={posts.items[i + 2].title}
+          text={`${posts.items[i + 2].description.substring(0, 200)}...`}
+          image={posts.items[i + 2].img}
+          url="introducing-the-wesh-network-toolkit"
+        />
+      )
+    }
+    var title = <></>
+    if (i == 0) {
+      title = (
         <h2>
           <span className={styles.green}>BLOG</span>
         </h2>
-      }
-      resultsRender.push(
-        <section className={styles.Section4}>
+      )
+    }
+    resultsRender.push(
+      <section className={styles.Section4}>
         {title}
 
-          <div className={styles.Section4Column}>
-            <div className={styles.CardGrid}>
-              {post1}
-              {post2}
-              {post3}
-            </div>
+        <div className={styles.Section4Column}>
+          <div className={styles.CardGrid}>
+            {post1}
+            {post2}
+            {post3}
           </div>
-        </section>
-      );
-    }
+        </div>
+      </section>,
+    )
+  }
   return (
     <>
       <Head>
@@ -90,17 +89,22 @@ export default function Blogpage() {
         <div className={styles.credits}>
           <p>Copyright © 2023 – Berty.Tech non-profit organization</p>
           <div>
-            {/* <img src="./img/Telegram.png" alt="" /> */ }
-            {/* <img src="./img/Twitter.png" alt="" /> */ }
-            {/* <img src="./img/Instagram.png" alt="" /> */ }
-            {/* <img src="./img/Around.png" alt="" /> */ }
-            {/* <img src="./img/Linkedin.png" alt="" /> */ }
-            {/* <img src="./img/Reddit.png" alt="" /> */ }
-            <a href="https://crpt.fyi/berty-discord" rel="noreferrer" target="_blank"> <img src="./img/Discord.png" alt="" /></a>
-            <a href="https://github.com/berty/weshnet/" rel="noreferrer" target="_blank"><img src="./img/Git.png" alt="" /></a>
+            {/* <img src="./img/Telegram.png" alt="" /> */}
+            {/* <img src="./img/Twitter.png" alt="" /> */}
+            {/* <img src="./img/Instagram.png" alt="" /> */}
+            {/* <img src="./img/Around.png" alt="" /> */}
+            {/* <img src="./img/Linkedin.png" alt="" /> */}
+            {/* <img src="./img/Reddit.png" alt="" /> */}
+            <a href="https://crpt.fyi/berty-discord" rel="noreferrer" target="_blank">
+              {" "}
+              <img src="./img/Discord.png" alt="" />
+            </a>
+            <a href="https://github.com/berty/weshnet/" rel="noreferrer" target="_blank">
+              <img src="./img/Git.png" alt="" />
+            </a>
           </div>
         </div>
       </main>
     </>
-  );
+  )
 }

@@ -36,7 +36,7 @@ export default function Post() {
                 <h2>{posts.title}</h2>
                 <p>
                   Now that you have been introduced to Wesh in the
-                  <a href="https://wesh.network/posts/1" target="_blank" rel="noreferrer"> previous blog post</a>, it’s time to explore the code. We will write a “Hello World” app, similar to the
+                  <a href="https://wesh.network/posts/introducing-the-wesh-network-toolkit" target="_blank" rel="noreferrer"> previous blog post</a>, it’s time to explore the code. We will write a “Hello World” app, similar to the
                   <a href="https://go.dev/doc/tutorial/getting-started" target="_blank" rel="noreferrer"> Go tutorial </a>
                   which you can read to set up Go on your computer and for other details. (This has been tested with Go 1.19 on macOS and Ubuntu.) This example app will connect to
                   the Wesh service and call a function. When finished, you will be confident that you can use Wesh on your platform.

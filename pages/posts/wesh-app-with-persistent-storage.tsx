@@ -36,7 +36,7 @@ export default function Post() {
                 <h2>{posts.title}</h2>
                 <p>
                   In the
-                  <a href="https://wesh.network/posts/2" target="_blank" rel="noreferrer">
+                  <a href="https://wesh.network/posts/wesh-hello-world-app" target="_blank" rel="noreferrer">
                     &nbsp;previous blog post
                   </a>
                   , we made an example “Hello world” app using the Wesh API. But it used in-memory storage for the keys and messages, which are lost when the app closes. It&apos;s

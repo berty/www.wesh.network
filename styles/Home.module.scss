@@ -326,6 +326,14 @@
       .Section4Column{
         width: 100%;
       }
+<<<<<<< Updated upstream
+=======
+      @media screen and (max-width: 414px) {
+        .Section4Column{
+           grid-template-columns: repeat(1, 1fr);
+         }
+       }
+>>>>>>> Stashed changes
       h2{
         margin-bottom: 88px;
         width: 100%;

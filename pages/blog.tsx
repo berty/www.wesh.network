@@ -15,64 +15,6 @@ import content from "./posts/content.json"
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Blogpage() {
-  let posts = content
-  const resultsRender = []
-  for (var i = 0; i < posts.items.length; i += 3) {
-    var post1 = (
-      <BlogCard
-        key={i}
-        title={posts.items[i].title}
-        text={`${posts.items[i].description.substring(0, 200)}...`}
-        image={posts.items[i].img}
-        url="wesh-app-with-persistent-storage"
-      />
-    )
-    var post2 = <></>
-    if (posts.items[i + 1] != undefined) {
-      post2 = (
-        <BlogCard
-          key={i}
-          title={posts.items[i + 1].title}
-          text={`${posts.items[i + 1].description.substring(0, 200)}...`}
-          image={posts.items[i + 1].img}
-          url="wesh-hello-world-app"
-        />
-      )
-    }
-    var post3 = <></>
-    if (posts.items[i + 2] != undefined) {
-      post3 = (
-        <BlogCard
-          key={i}
-          title={posts.items[i + 2].title}
-          text={`${posts.items[i + 2].description.substring(0, 200)}...`}
-          image={posts.items[i + 2].img}
-          url="introducing-the-wesh-network-toolkit"
-        />
-      )
-    }
-    var title = <></>
-    if (i == 0) {
-      title = (
-        <h2>
-          <span className={styles.green}>BLOG</span>
-        </h2>
-      )
-    }
-    resultsRender.push(
-      <section className={styles.Section4}>
-        {title}
-
-        <div className={styles.Section4Column}>
-          <div className={styles.CardGrid}>
-            {post1}
-            {post2}
-            {post3}
-          </div>
-        </div>
-      </section>,
-    )
-  }
   return (
     <>
       <Head>
@@ -83,8 +25,18 @@ export default function Blogpage() {
       </Head>
       <main className={styles.Body}>
         <Navbar />
-        {resultsRender}
+        <section className={styles.Section4}>
+          <h2>
+            <span className={styles.green}>BLOG</span>
+          </h2>
 
+          <div className={styles.SectionGridColumns}>
+            {content.items.map((post) => (
+              <BlogCard key={post.id} title={post.title} text={`${post.description.substring(0, 200)}...`} image={post.img} url={post.link} />
+            ))}
+          </div>
+        </section>
+        ,
         <Footer />
         <div className={styles.credits}>
           <p>Copyright © 2023 – Berty.Tech non-profit organization</p>

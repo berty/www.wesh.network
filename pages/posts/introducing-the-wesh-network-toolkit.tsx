@@ -26,7 +26,7 @@ export default function Post() {
           <div className={styles.SectionBlogContainer}>
             <div className={styles.SectionBlogCard}>
               <div className={styles.SectionBlogText}>
-                <h2>{posts.title}</h2>
+                <h2>Introducing the Wesh Network Toolkit</h2>
                 <p>
                   {parse(posts.content)}
                 </p>

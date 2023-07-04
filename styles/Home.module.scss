@@ -326,14 +326,25 @@
       .Section4Column{
         width: 100%;
       }
-<<<<<<< Updated upstream
-=======
+      .SectionGridColumns{
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        row-gap: 46px;
+        column-gap: 46px;
+        grid-auto-flow: row;
+        width: 80%;
+      }
       @media screen and (max-width: 414px) {
-        .Section4Column{
+        .SectionGridColumns{
            grid-template-columns: repeat(1, 1fr);
          }
        }
->>>>>>> Stashed changes
       h2{
         margin-bottom: 88px;
         width: 100%;

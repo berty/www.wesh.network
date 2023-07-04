@@ -417,7 +417,7 @@ go run .
                 </p>
                 <p>
                   <i>
-                    Posted by {posts.author} on {posts.pubDate}
+                    Posted by {posts?.author} on {posts?.pubDate}
                   </i>
                 </p>
               </div>

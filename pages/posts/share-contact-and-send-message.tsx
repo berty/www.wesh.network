@@ -33,9 +33,10 @@ export default function Post() {
               <div className={styles.SectionBlogText}>
                 <h2>Wesh App: Share Contact and Send Message</h2>
                 <p>
-                  We continue to use the Wesh API to build more capable apps. In the <a href="https://wesh.network/posts/wesh-app-with-persistent-storage">previous blog post</a>, we made an example app which creates an account using persistent on-disk
-                  storage, and we discussed the types of information in Wesh. This includes a Contact group where two user accounts can communicate. In this blog post we will make
-                  an example app to share contact and send a message in the Contact group. (This is a longer blog post because we’re building a running app.)
+                  We continue to use the Wesh API to build more capable apps. In the <a href="https://wesh.network/posts/wesh-app-with-persistent-storage">previous blog post</a>,
+                  we made an example app which creates an account using persistent on-disk storage, and we discussed the types of information in Wesh. This includes a Contact group
+                  where two user accounts can communicate. In this blog post we will make an example app to share contact and send a message in the Contact group. (This is a longer
+                  blog post because we’re building a running app.)
                 </p>
                 <p>
                   As before, we write an app similar to the <a href="https://go.dev/doc/tutorial/getting-started">Go tutorial</a>. In a terminal enter:
@@ -156,15 +157,14 @@ import (
                 </p>
                 <p>
                   Let’s imagine that client2 has sent the contact request, so we call <code>receiveContactRequest</code> which we will define below. It returns <code>request</code>{" "}
-                  which has the account public key of client2, so we call <code>ContactRequestAccept</code>&nbsp; (
+                  which has the account public key of client2, so we call <code>ContactRequestAccept</code> (
                   <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ContactRequestAccept">docs</a>) to accept the contact
                   request and create the Contact group.
                 </p>
                 <p>
-                  Now we need to activate this group. We use the same account public key of client2 to identify the Contact group and call <code>GroupInfo</code>&nbsp; (
+                  Now we need to activate this group. We use the same account public key of client2 to identify the Contact group and call <code>GroupInfo</code> (
                   <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupInfo">docs</a>) to get the group’s public key, and
-                  then call&nbsp;
-                  <code>ActivateGroup</code>&nbsp;(
+                  then call <code>ActivateGroup</code> (
                   <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ActivateGroup">docs</a>) to activate it.
                 </p>
                 <p>
@@ -225,25 +225,29 @@ import (
                   </code>
                 </pre>
                 <p>
-                  This function takes the client1 which we created in <code>main</code> and calls <code>ServiceGetConfiguration</code>&nbsp; (
+                  This function takes the client1 which we created in <code>main</code> and calls <code>ServiceGetConfiguration</code> (
                   <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ServiceGetConfiguration">docs</a>). Instead of getting
                   the configuration’s peer ID as in previous examples, we get the public key of client1’s Account group. This public key is also in the shared contact, and is used
-                  by client2 to send a contact request to client1. To receive it, we call <code>GroupMetadataList</code>&nbsp; (
+                  by client2 to send a contact request to client1. To receive it, we call <code>GroupMetadataList</code> (
                   <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupMetadataList">docs</a>) with the Account group
                   public key.
                 </p>
                 <p>
-                  Most API functions return a data structure, but a few like <code>GroupMetadataList</code> return a subscription stream like <code>subMetadata</code>. We use a
-                  &nbsp;<code>for</code> loop and call
-                  &nbsp;<code>subMetadata.Recv()</code> which blocks until it receives an event (or end of stream). As you build more complex apps, an event loop like this may handle
-                  more event types and operations. For now, we just check that the event type is the one we’re waiting for,&nbsp;<code>EventTypeAccountContactRequestIncomingReceived</code>.
+                  Most API functions return a data structure, but a few like <code>GroupMetadataList</code> return a subscription stream like <code>subMetadata</code>. We use a{" "}
+                  <code>for</code> loop and call <code>subMetadata.Recv()</code> which blocks until it receives an event (or end of stream). As you build more complex apps, an
+                  event loop like this may handle more event types and operations. For now, we just check that the event type is the one we’re waiting for,{" "}
+                  <code>EventTypeAccountContactRequestIncomingReceived</code>.
                 </p>
                 <p>
-                  Now we can use <code>Unmarshal</code> to convert the <code>metadata</code> event to the specific <code>AccountContactRequestIncomingReceived</code> event. (<code>Unmarshal</code> is part of the Protobuf
-                  interface. For more details, <a href="https://pkg.go.dev/github.com/golang/protobuf/proto#Unmarshal">see the docs</a>). This is the contact <code>request</code> that we return from the
+                  Now we can use <code>Unmarshal</code> to convert the <code>metadata</code> event to the specific <code>AccountContactRequestIncomingReceived</code> event. (
+                  <code>Unmarshal</code> is part of the Protobuf interface. For more details,{" "}
+                  <a href="https://pkg.go.dev/github.com/golang/protobuf/proto#Unmarshal">see the docs</a>). This is the contact <code>request</code> that we return from the
                   function.
                 </p>
-                <p>Now we need to define <code>receiveMessage</code> which waits for the message. Paste the following function to the file <code>contact.go</code> . (This one is shorter!)</p>
+                <p>
+                  Now we need to define <code>receiveMessage</code> which waits for the message. Paste the following function to the file <code>contact.go</code>. (This one is
+                  shorter!)
+                </p>
                 <pre>
                   <code className="language-go">
                     {`func receiveMessage(ctx context.Context, client weshnet.ServiceClient, groupInfo *protocoltypes.GroupInfo_Reply) (*protocoltypes.GroupMessageEvent, error) {
@@ -275,19 +279,20 @@ import (
                   </code>
                 </pre>
                 <p>
-                  Similar to the previous function, this function takes the client1 which we created in <code>main</code> . It also takes the <code>groupInfo</code> object of the Contact group. (The
-                  &nbsp;<code>main</code> function already used this to activate the group.)
+                  Similar to the previous function, this function takes the client1 which we created in <code>main</code> . It also takes the <code>groupInfo</code> object of the
+                  Contact group. (The <code>main</code> function already used this to activate the group.)
                 </p>
                 <p>
-                  As in the previous function, we want to subscribe to events. In the <a href="https://wesh.network/posts/wesh-app-with-persistent-storage">previous blog post</a>, we briefly
-                  discussed the difference between the Metadata log and the Message log. A contact request is an event in the Metadata log, so <code>receiveContactRequest</code> called
-                  &nbsp;<code>GroupMetadataList</code> . But now we want to receive a “normal” message when it is added to the Message log.
+                  As in the previous function, we want to subscribe to events. In the <a href="https://wesh.network/posts/wesh-app-with-persistent-storage">previous blog post</a>,
+                  we briefly discussed the difference between the Metadata log and the Message log. A contact request is an event in the Metadata log, so{" "}
+                  <code>receiveContactRequest</code> called <code>GroupMetadataList</code> . But now we want to receive a “normal” message when it is added to the Message log.
                 </p>
                 <p>
-                  We call the API method <code>GroupMessageList</code>&nbsp;
-                  (<a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupMessageList">docs</a>) which returns the subscription stream
-                  &nbsp;<code>subMessages</code>. We use a <code>for</code> loop and call <code>subMetadata.Recv()</code> which blocks until it receives an event (or end of stream). Finally, the function returns
-                  &nbsp;<code>message</code> which is a <code>GroupMessageEvent</code> so that the main function can print the message from client2.
+                  We call the API method <code>GroupMessageList</code> (
+                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupMessageList">docs</a>) which returns the
+                  subscription stream <code>subMessages</code>. We use a <code>for</code> loop and call <code>subMetadata.Recv()</code> which blocks until it receives an event (or
+                  end of stream). Finally, the function returns <code>message</code> which is a <code>GroupMessageEvent</code> so that the main function can print the message from
+                  client2.
                 </p>
                 <h3>Client 2</h3>
                 <p>
@@ -304,7 +309,10 @@ import (
 `}
                   </code>
                 </pre>
-                <p>Now we can define the function <code>doClient2</code> which is called if we run using the contact string. Paste the following function to the file <code>contact.go</code> and save it.</p>
+                <p>
+                  Now we can define the function <code>doClient2</code> which is called if we run using the contact string. Paste the following function to the file{" "}
+                  <code>contact.go</code> and save it.
+                </p>
                 <pre>
                   <code className="language-go">
                     {`func doClient2(encodedContact string) {
@@ -368,32 +376,32 @@ import (
                   </code>
                 </pre>
                 <p>
-                  This function takes the <code>encodedContact</code> from the command line. It runs as a separate process, so we need to use <code>NewPersistentServiceClient</code> to create a separate
-                  client2 with persistent data stored in a separate folder, “data2”.
+                  This function takes the <code>encodedContact</code> from the command line. It runs as a separate process, so we need to use{" "}
+                  <code>NewPersistentServiceClient</code> to create a separate client2 with persistent data stored in a separate folder, “data2”.
                 </p>
                 <p>
-                  Next we use <code>base58.Decode</code> to recover the encoded byte array with client1’s contact info, and use <code>DecodeContact</code>
-                  &nbsp;(<a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.DecodeContact">docs</a>) to extract the <code>contact</code> info. Now
-                  client2 can call <code>ContactRequestSend</code>&nbsp;
-                  (<a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ContactRequestSend">docs</a>) to send this to client1 as a
-                  contact request. You may be thinking, “client1 just sent this info to client2, so why does client2 need to send it back?” This is part of the secure handshake.
-                  client2 needs to make sure that the shared contact really came from client1, and needs to decide if creating a contact is actually desired.
+                  Next we use <code>base58.Decode</code> to recover the encoded byte array with client1’s contact info, and use <code>DecodeContact</code> (
+                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.DecodeContact">docs</a>) to extract the{" "}
+                  <code>contact</code> info. Now client2 can call <code>ContactRequestSend</code> (
+                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ContactRequestSend">docs</a>) to send this to client1
+                  as a contact request. You may be thinking, “client1 just sent this info to client2, so why does client2 need to send it back?” This is part of the secure
+                  handshake. client2 needs to make sure that the shared contact really came from client1, and needs to decide if creating a contact is actually desired.
                 </p>
                 <p>
-                  Similar to the code above, client2 needs to activate the Contact group using <code>GroupInfo</code> and <code>ActivateGroup</code> . (In this case, client2 has client1’s account public
-                  key from the shared contact in <code>contact.Contact.PK</code> .)
+                  Similar to the code above, client2 needs to activate the Contact group using <code>GroupInfo</code> and <code>ActivateGroup</code> . (In this case, client2 has
+                  client1’s account public key from the shared contact in <code>contact.Contact.PK</code> .)
                 </p>
                 <p>
-                  We’re almost done! Client2 calls <code>AppMessageSend</code>&nbsp;
-                  (<a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.AppMessageSend">docs</a>) to use the Contact group public key to
-                  send a “Hello” message to the Contact group. (For generality, a message is any byte array. In this case we simply store the message string in it.) For efficiency,
-                  the <code>AppMessageSend</code> function queues the message to be sent and returns immediately. If we exit the application too soon, then the Wesh services won’t have time
-                  to actually send the message. Therefore, we sleep this function for 5 seconds so that the service threads can complete.
+                  We’re almost done! Client2 calls <code>AppMessageSend</code> (
+                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.AppMessageSend">docs</a>) to use the Contact group
+                  public key to send a “Hello” message to the Contact group. (For generality, a message is any byte array. In this case we simply store the message string in it.)
+                  For efficiency, the <code>AppMessageSend</code> function queues the message to be sent and returns immediately. If we exit the application too soon, then the Wesh
+                  services won’t have time to actually send the message. Therefore, we sleep this function for 5 seconds so that the service threads can complete.
                 </p>
                 <h3>Run the app</h3>
                 <p>That’s all the code! It’s time to run the app. In a terminal enter:</p>
                 <pre>
-								<code className="language-go">
+                  <code className="language-go">
                     {`
 go mod tidy
 go run .
@@ -401,19 +409,21 @@ go run .
                   </code>
                 </pre>
                 <p>
-                  (You only need to do <code>go mod tidy</code> the first time.) It should print the contact string from client1, something like&nbsp;
+                  (You only need to do <code>go mod tidy</code> the first time.) It should print the contact string from client1, something like
                   <code>2KqzJQpZ2Y7EDaep6CnceT6ozqy1Ss6qJV8tsN59QSBejfa4TiYjMr8Z9PjHr1D2bYa4EozWudwaWMwB5jXqb5gRLj2bX</code>. Copy this to the clipboard.
                 </p>
                 <p>Leave this app running. Now, in a separate terminal we run as client2. cd to the same directory and enter:</p>
-                <pre><code className="language-go">{"go run . <contact-string> "}</code></pre>
+                <pre>
+                  <code className="language-go">{"go run . <contact-string> "}</code>
+                </pre>
                 <p>
-                  where <code>{"<contact-string>"}</code> is the contact string from client1. It should print <code>Sending message...</code>. Now look at the terminal for client1. It should print
-                  &nbsp;<code>client2: Hello</code> .
+                  where <code>{"<contact-string>"}</code> is the contact string from client1. It should print <code>Sending message...</code>. Now look at the terminal for client1.
+                  It should print <code>client2: Hello</code> .
                 </p>
                 <p>
                   You have established Wesh communication! You can use this example app as a basis for more sophisticated Wesh apps. Overall, this simply creates a Contact group
-                  and calls <code>AppMessageSend</code>. But you may understand that Wesh communicates differently than using a traditional network connection. How does the message actually
-                  get from client2 to client1? In the next blog post, we’ll do a theory dive into how Wesh’s asynchronous communication works.
+                  and calls <code>AppMessageSend</code>. But you may understand that Wesh communicates differently than using a traditional network connection. How does the message
+                  actually get from client2 to client1? In the next blog post, we’ll do a theory dive into how Wesh’s asynchronous communication works.
                 </p>
                 <p>
                   <i>

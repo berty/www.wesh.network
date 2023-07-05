@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className={styles.Footer}>
       <div className={styles.left}>
-        <img className={styles.logo} src="./img/NavBarLogo.png" alt="" />
+        <img className={styles.logo} src="/img/NavBarLogo.png" alt="" />
         {/*<img src="../../img/Footer.png" alt="" />*/}
         <p>
           Wesh Network is an open source, wild & asynchronous mesh network

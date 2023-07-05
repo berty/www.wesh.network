@@ -178,49 +178,46 @@ import (
                 </p>
                 <pre>
                   <code className="language-go">
-                    {`
-	func receiveContactRequest(ctx context.Context, client weshnet.ServiceClient) (*protocoltypes.AccountContactRequestIncomingReceived, error) {
-		// Get the client's AccountGroupPK from the configuration.
-		config, err := client.ServiceGetConfiguration(ctx,
-			&protocoltypes.ServiceGetConfiguration_Request{})
-		if err != nil {
-			return nil, err
-		}
-
-		// Subscribe to metadata events. ("sub" means "subscription".)
-		subCtx, subCancel := context.WithCancel(ctx)
-		defer subCancel()
-		subMetadata, err := client.GroupMetadataList(subCtx,
-			&protocoltypes.GroupMetadataList_Request{
-				GroupPK: config.AccountGroupPK,
-			})
-		if err != nil {
-			return nil, err
-		}
-
-		for {
-			metadata, err := subMetadata.Recv()
-			if err == io.EOF || subMetadata.Context().Err() != nil {
-				// Not received.
-				return nil, nil
-			}
-			if err != nil {
-				return nil, err
-			}
-
-			if metadata == nil || metadata.Metadata.EventType !=
-					protocoltypes.EventTypeAccountContactRequestIncomingReceived {
-				continue
-			}
-
-			request := &protocoltypes.AccountContactRequestIncomingReceived{}
-			if err = request.Unmarshal(metadata.Event); err != nil {
-				return nil, err
-			}
-
-			return request, nil
-		}
+                    {`func receiveContactRequest(ctx context.Context, client weshnet.ServiceClient) (*protocoltypes.AccountContactRequestIncomingReceived, error) {
+	// Get the client's AccountGroupPK from the configuration.
+	config, err := client.ServiceGetConfiguration(ctx, &protocoltypes.ServiceGetConfiguration_Request{})
+	if err != nil {
+		return nil, err
 	}
+
+	// Subscribe to metadata events. ("sub" means "subscription".)
+	subCtx, subCancel := context.WithCancel(ctx)
+	defer subCancel()
+	subMetadata, err := client.GroupMetadataList(subCtx, &protocoltypes.GroupMetadataList_Request{
+			GroupPK: config.AccountGroupPK,
+		})
+	if err != nil {
+		return nil, err
+	}
+
+	for {
+		metadata, err := subMetadata.Recv()
+		if err == io.EOF || subMetadata.Context().Err() != nil {
+			// Not received.
+			return nil, nil
+		}
+		if err != nil {
+			return nil, err
+		}
+
+		if metadata == nil || metadata.Metadata.EventType !=
+				protocoltypes.EventTypeAccountContactRequestIncomingReceived {
+			continue
+		}
+
+		request := &protocoltypes.AccountContactRequestIncomingReceived{}
+		if err = request.Unmarshal(metadata.Event); err != nil {
+			return nil, err
+		}
+
+		return request, nil
+	}
+}
 `}
                   </code>
                 </pre>
@@ -302,10 +299,10 @@ import (
                 </p>
                 <pre>
                   <code className="language-go">
-                    {`if len(os.Args) == 2 {
-	doClient2(os.Args[1])
-	return
-}
+                    {`	if len(os.Args) == 2 {
+		doClient2(os.Args[1])
+		return
+	}
 `}
                   </code>
                 </pre>

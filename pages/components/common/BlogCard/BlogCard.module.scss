@@ -1,6 +1,7 @@
+// Card component for blog posts
 .CardContainer{
     width: 300px;
-    max-height: 345px;
+    min-height: 345px;
     box-sizing: border-box;
     background: #010101;
     padding: 10px;

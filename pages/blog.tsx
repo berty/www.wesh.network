@@ -36,7 +36,6 @@ export default function Blogpage() {
             ))}
           </div>
         </section>
-        ,
         <Footer />
         <div className={styles.credits}>
           <p>Copyright © 2023 – Berty.Tech non-profit organization</p>

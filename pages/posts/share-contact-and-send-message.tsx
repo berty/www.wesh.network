@@ -26,7 +26,6 @@ export default function Post() {
       </Head>
       <main className={styles.Body}>
         <Navbar />
-x
         <section className={styles.SectionBlog}>
           <div className={styles.SectionBlogContainer}>
             <div className={styles.SectionBlogCard}>

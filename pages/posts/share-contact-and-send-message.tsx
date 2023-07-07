@@ -26,7 +26,6 @@ export default function Post() {
       </Head>
       <main className={styles.Body}>
         <Navbar />
-
         <section className={styles.SectionBlog}>
           <div className={styles.SectionBlogContainer}>
             <div className={styles.SectionBlogCard}>
@@ -271,18 +270,17 @@ import (
 
 		return message, nil
 	}
-}
-                    `}
+}`}
                   </code>
                 </pre>
                 <p>
-                  Similar to the previous function, this function takes the client1 which we created in <code>main</code> . It also takes the <code>groupInfo</code> object of the
+                  Similar to the previous function, this function takes the client1 which we created in <code>main</code>. It also takes the <code>groupInfo</code> object of the
                   Contact group. (The <code>main</code> function already used this to activate the group.)
                 </p>
                 <p>
                   As in the previous function, we want to subscribe to events. In the <a href="https://wesh.network/posts/wesh-app-with-persistent-storage">previous blog post</a>,
                   we briefly discussed the difference between the Metadata log and the Message log. A contact request is an event in the Metadata log, so{" "}
-                  <code>receiveContactRequest</code> called <code>GroupMetadataList</code> . But now we want to receive a “normal” message when it is added to the Message log.
+                  <code>receiveContactRequest</code> called <code>GroupMetadataList</code>. But now we want to receive a “normal” message when it is added to the Message log.
                 </p>
                 <p>
                   We call the API method <code>GroupMessageList</code> (
@@ -385,8 +383,8 @@ import (
                   handshake. client2 needs to make sure that the shared contact really came from client1, and needs to decide if creating a contact is actually desired.
                 </p>
                 <p>
-                  Similar to the code above, client2 needs to activate the Contact group using <code>GroupInfo</code> and <code>ActivateGroup</code> . (In this case, client2 has
-                  client1’s account public key from the shared contact in <code>contact.Contact.PK</code> .)
+                  Similar to the code above, client2 needs to activate the Contact group using <code>GroupInfo</code> and <code>ActivateGroup</code>. (In this case, client2 has
+                  client1’s account public key from the shared contact in <code>contact.Contact.PK</code>.)
                 </p>
                 <p>
                   We’re almost done! Client2 calls <code>AppMessageSend</code> (
@@ -399,14 +397,12 @@ import (
                 <p>That’s all the code! It’s time to run the app. In a terminal enter:</p>
                 <pre>
                   <code className="language-go">
-                    {`
-go mod tidy
-go run .
-                    `}
+                    {`go mod tidy
+go run .`}
                   </code>
                 </pre>
                 <p>
-                  (You only need to do <code>go mod tidy</code> the first time.) It should print the contact string from client1, something like
+                  (You only need to do <code>go mod tidy</code> the first time.) It should print the contact string from client1, something like&nbsp;
                   <code>2KqzJQpZ2Y7EDaep6CnceT6ozqy1Ss6qJV8tsN59QSBejfa4TiYjMr8Z9PjHr1D2bYa4EozWudwaWMwB5jXqb5gRLj2bX</code>. Copy this to the clipboard.
                 </p>
                 <p>Leave this app running. Now, in a separate terminal we run as client2. cd to the same directory and enter:</p>
@@ -415,7 +411,7 @@ go run .
                 </pre>
                 <p>
                   where <code>{"<contact-string>"}</code> is the contact string from client1. It should print <code>Sending message...</code>. Now look at the terminal for client1.
-                  It should print <code>client2: Hello</code> .
+                  It should print <code>client2: Hello</code>.
                 </p>
                 <p>
                   You have established Wesh communication! You can use this example app as a basis for more sophisticated Wesh apps. Overall, this simply creates a Contact group

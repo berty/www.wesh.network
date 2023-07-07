@@ -38,7 +38,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.HomeImage}>
-            <img src="./img/HomeImage.png" alt="Homepage Image" />
+            <img src="./img/homeImage.png" alt="Homepage Image" />
           </div>
         </section>
         <section className={styles.Section2}>
@@ -183,7 +183,7 @@ export default function Home() {
               <Card
                 title="Social"
                 text="Build the dating app that doesn’t stalk its users"
-                image="./img/Com.svg"
+                image="./img/COM.svg"
               />
             </div>
             <div className={styles.CardGrid}>
@@ -200,7 +200,7 @@ export default function Home() {
               <Card
                 title="Offgrid"
                 text="Create reliable communication channels with third parties in remote locations"
-                image="./img/Volun.svg"
+                image="./img/VOLUN.svg"
               />
             </div>
           </div>

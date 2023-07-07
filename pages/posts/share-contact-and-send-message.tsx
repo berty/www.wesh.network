@@ -406,7 +406,7 @@ go run .
                   </code>
                 </pre>
                 <p>
-                  (You only need to do <code>go mod tidy</code> the first time.) It should print the contact string from client1, something like
+                  (You only need to do <code>go mod tidy</code> the first time.) It should print the contact string from client1, something like&nbsp;
                   <code>2KqzJQpZ2Y7EDaep6CnceT6ozqy1Ss6qJV8tsN59QSBejfa4TiYjMr8Z9PjHr1D2bYa4EozWudwaWMwB5jXqb5gRLj2bX</code>. Copy this to the clipboard.
                 </p>
                 <p>Leave this app running. Now, in a separate terminal we run as client2. cd to the same directory and enter:</p>

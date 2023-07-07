@@ -271,8 +271,7 @@ import (
 
 		return message, nil
 	}
-}
-                    `}
+}`}
                   </code>
                 </pre>
                 <p>
@@ -399,10 +398,8 @@ import (
                 <p>That’s all the code! It’s time to run the app. In a terminal enter:</p>
                 <pre>
                   <code className="language-go">
-                    {`
-go mod tidy
-go run .
-                    `}
+                    {`go mod tidy
+go run .`}
                   </code>
                 </pre>
                 <p>

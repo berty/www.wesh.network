@@ -149,7 +149,7 @@ import (
                 </p>
                 <p>
                   Next we call the Wesh API function <code>ShareContact</code> which is{" "}
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ShareContact">documented here</a>. It returns an
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ShareContact">documented here</a>. It returns an
                   encoded byte array with the information that client2 needs to make a contact request. We use <code>base58.Encode</code> to make it a shareable string and print it
                   to the console. (The Wesh API leaves it up to the application developer to decide how to encode the byte array. You may use base58, or make a QR code, or a URI,
                   etc.) This string is used by client2, as we will see.
@@ -157,14 +157,14 @@ import (
                 <p>
                   Let’s imagine that client2 has sent the contact request, so we call <code>receiveContactRequest</code> which we will define below. It returns <code>request</code>{" "}
                   which has the account public key of client2, so we call <code>ContactRequestAccept</code> (
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ContactRequestAccept">docs</a>) to accept the contact
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ContactRequestAccept">docs</a>) to accept the contact
                   request and create the Contact group.
                 </p>
                 <p>
                   Now we need to activate this group. We use the same account public key of client2 to identify the Contact group and call <code>GroupInfo</code> (
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupInfo">docs</a>) to get the group’s public key, and
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupInfo">docs</a>) to get the group’s public key, and
                   then call <code>ActivateGroup</code> (
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ActivateGroup">docs</a>) to activate it.
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ActivateGroup">docs</a>) to activate it.
                 </p>
                 <p>
                   Finally, let’s imagine that client2 has sent a message to the group, so we call <code>receiveMessage</code> which we will define below. This returns the message
@@ -222,10 +222,10 @@ import (
                 </pre>
                 <p>
                   This function takes the client1 which we created in <code>main</code> and calls <code>ServiceGetConfiguration</code> (
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ServiceGetConfiguration">docs</a>). Instead of getting
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ServiceGetConfiguration">docs</a>). Instead of getting
                   the configuration’s peer ID as in previous examples, we get the public key of client1’s Account group. This public key is also in the shared contact, and is used
                   by client2 to send a contact request to client1. To receive it, we call <code>GroupMetadataList</code> (
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupMetadataList">docs</a>) with the Account group
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupMetadataList">docs</a>) with the Account group
                   public key.
                 </p>
                 <p>
@@ -284,7 +284,7 @@ import (
                 </p>
                 <p>
                   We call the API method <code>GroupMessageList</code> (
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupMessageList">docs</a>) which returns the
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.GroupMessageList">docs</a>) which returns the
                   subscription stream <code>subMessages</code>. We use a <code>for</code> loop and call <code>subMetadata.Recv()</code> which blocks until it receives an event (or
                   end of stream). Finally, the function returns <code>message</code> which is a <code>GroupMessageEvent</code> so that the main function can print the message from
                   client2.
@@ -376,9 +376,9 @@ import (
                 </p>
                 <p>
                   Next we use <code>base58.Decode</code> to recover the encoded byte array with client1’s contact info, and use <code>DecodeContact</code> (
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.DecodeContact">docs</a>) to extract the{" "}
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.DecodeContact">docs</a>) to extract the{" "}
                   <code>contact</code> info. Now client2 can call <code>ContactRequestSend</code> (
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ContactRequestSend">docs</a>) to send this to client1
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ContactRequestSend">docs</a>) to send this to client1
                   as a contact request. You may be thinking, “client1 just sent this info to client2, so why does client2 need to send it back?” This is part of the secure
                   handshake. client2 needs to make sure that the shared contact really came from client1, and needs to decide if creating a contact is actually desired.
                 </p>
@@ -388,7 +388,7 @@ import (
                 </p>
                 <p>
                   We’re almost done! Client2 calls <code>AppMessageSend</code> (
-                  <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.AppMessageSend">docs</a>) to use the Contact group
+                  <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.AppMessageSend">docs</a>) to use the Contact group
                   public key to send a “Hello” message to the Contact group. (For generality, a message is any byte array. In this case we simply store the message string in it.)
                   For efficiency, the <code>AppMessageSend</code> function queues the message to be sent and returns immediately. If we exit the application too soon, then the Wesh
                   services won’t have time to actually send the message. Therefore, we sleep this function for 5 seconds so that the service threads can complete.

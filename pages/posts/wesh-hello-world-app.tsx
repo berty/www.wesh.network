@@ -111,8 +111,8 @@ func main() {
                 </p>
                 <p>
                   Finally, we interact with the Wesh service by calling <code>client.ServiceGetConfiguration</code> , passing the <code>ctx</code> that we created.
-                  This method gets the current configuration of the service and is <a href="https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ServiceGetConfiguration" target="_blank" rel="noreferrer">documented here</a>, along
-                  with all the other API calls. Each API call takes a Protobuf request message. In this case there are no parameters, so we create an empty <code>protocoltypes.ServiceGetConfiguration_Request</code>. (We will see more complex examples later.) And each API call returns a Protobuf reply message, or sometimes a stream object. In this case it is a <a href=" https://buf.build/berty/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ServiceGetConfiguration.Reply" target="_blank" rel="noreferrer">ServiceGetConfiguration.Reply</a>. So to finish, we print a happy message with
+                  This method gets the current configuration of the service and is <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ServiceGetConfiguration" target="_blank" rel="noreferrer">documented here</a>, along
+                  with all the other API calls. Each API call takes a Protobuf request message. In this case there are no parameters, so we create an empty <code>protocoltypes.ServiceGetConfiguration_Request</code>. (We will see more complex examples later.) And each API call returns a Protobuf reply message, or sometimes a stream object. In this case it is a <a href=" https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ServiceGetConfiguration.Reply" target="_blank" rel="noreferrer">ServiceGetConfiguration.Reply</a>. So to finish, we print a happy message with
                   the <code>PeerID</code> of the in-memory IPFS node.
                 </p>
                 <p>To see the result, in a terminal enter:</p>

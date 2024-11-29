@@ -66,8 +66,8 @@ import (
 	"context"
 	"fmt"
 
-	"berty.tech/weshnet"
-	"berty.tech/weshnet/pkg/protocoltypes"
+	"berty.tech/weshnet/v2"
+	"berty.tech/weshnet/v2/pkg/protocoltypes"
 )`}
                   </code>
                 </pre>
@@ -92,7 +92,7 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println("Hello, world! My peer ID is", config.PeerID)
+	fmt.Println("Hello, world! My peer ID is", config.PeerId)
 }
 `}
                   </code>

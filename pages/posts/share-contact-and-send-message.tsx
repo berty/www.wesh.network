@@ -64,9 +64,10 @@ import (
 	"os"
 	"time"
 
-	"berty.tech/weshnet"
-	"berty.tech/weshnet/pkg/protocoltypes"
+	"berty.tech/weshnet/v2"
+	"berty.tech/weshnet/v2/pkg/protocoltypes"
 	"github.com/mr-tron/base58"
+	"google.golang.org/protobuf/proto"
   )`}
                   </code>
                 </pre>
@@ -108,7 +109,7 @@ import (
 	// client1 accepts the contact request from client2.
 	_, err = client1.ContactRequestAccept(ctx,
 		&protocoltypes.ContactRequestAccept_Request{
-			ContactPK: request.ContactPK,
+			ContactPk: request.ContactPk,
 		})
 	if err != nil {
 		panic(err)
@@ -116,13 +117,13 @@ import (
 
 	// Activate the contact group.
 	groupInfo, err := client1.GroupInfo(ctx, &protocoltypes.GroupInfo_Request{
-		ContactPK: request.ContactPK,
+		ContactPk: request.ContactPk,
 	})
 	if err != nil {
 		panic(err)
 	}
 	_, err = client1.ActivateGroup(ctx, &protocoltypes.ActivateGroup_Request{
-		GroupPK: groupInfo.Group.PublicKey,
+		GroupPk: groupInfo.Group.PublicKey,
 	})
 	if err != nil {
 		panic(err)
@@ -178,7 +179,7 @@ import (
                 <pre>
                   <code className="language-go">
                     {`func receiveContactRequest(ctx context.Context, client weshnet.ServiceClient) (*protocoltypes.AccountContactRequestIncomingReceived, error) {
-	// Get the client's AccountGroupPK from the configuration.
+	// Get the client's AccountGroupPk from the configuration.
 	config, err := client.ServiceGetConfiguration(ctx, &protocoltypes.ServiceGetConfiguration_Request{})
 	if err != nil {
 		return nil, err
@@ -188,7 +189,7 @@ import (
 	subCtx, subCancel := context.WithCancel(ctx)
 	defer subCancel()
 	subMetadata, err := client.GroupMetadataList(subCtx, &protocoltypes.GroupMetadataList_Request{
-			GroupPK: config.AccountGroupPK,
+			GroupPk: config.AccountGroupPk,
 		})
 	if err != nil {
 		return nil, err
@@ -205,12 +206,12 @@ import (
 		}
 
 		if metadata == nil || metadata.Metadata.EventType !=
-				protocoltypes.EventTypeAccountContactRequestIncomingReceived {
+				protocoltypes.EventType_EventTypeAccountContactRequestIncomingReceived {
 			continue
 		}
 
 		request := &protocoltypes.AccountContactRequestIncomingReceived{}
-		if err = request.Unmarshal(metadata.Event); err != nil {
+		if err = proto.Unmarshal(metadata.Event, request); err != nil {
 			return nil, err
 		}
 
@@ -232,7 +233,7 @@ import (
                   Most API functions return a data structure, but a few like <code>GroupMetadataList</code> return a subscription stream like <code>subMetadata</code>. We use a{" "}
                   <code>for</code> loop and call <code>subMetadata.Recv()</code> which blocks until it receives an event (or end of stream). As you build more complex apps, an
                   event loop like this may handle more event types and operations. For now, we just check that the event type is the one we’re waiting for,{" "}
-                  <code>EventTypeAccountContactRequestIncomingReceived</code>.
+                  <code>EventType_EventTypeAccountContactRequestIncomingReceived</code>.
                 </p>
                 <p>
                   Now we can use <code>Unmarshal</code> to convert the <code>metadata</code> event to the specific <code>AccountContactRequestIncomingReceived</code> event. (
@@ -251,7 +252,7 @@ import (
 	subCtx, subCancel := context.WithCancel(ctx)
 	defer subCancel()
 	subMessages, err := client.GroupMessageList(subCtx, &protocoltypes.GroupMessageList_Request{
-		GroupPK: groupInfo.Group.PublicKey,
+		GroupPk: groupInfo.Group.PublicKey,
 	})
 	if err != nil {
 		panic(err)
@@ -343,13 +344,13 @@ import (
 
 	// Activate the contact group.
 	groupInfo, err := client2.GroupInfo(ctx, &protocoltypes.GroupInfo_Request{
-		ContactPK: contact.Contact.PK,
+		ContactPk: contact.Contact.Pk,
 	})
 	if err != nil {
 		panic(err)
 	}
 	_, err = client2.ActivateGroup(ctx, &protocoltypes.ActivateGroup_Request{
-		GroupPK: groupInfo.Group.PublicKey,
+		GroupPk: groupInfo.Group.PublicKey,
 	})
 	if err != nil {
 		panic(err)
@@ -357,7 +358,7 @@ import (
 
 	// Send a message to the contact group.
 	_, err = client2.AppMessageSend(ctx, &protocoltypes.AppMessageSend_Request{
-		GroupPK: groupInfo.Group.PublicKey,
+		GroupPk: groupInfo.Group.PublicKey,
 		Payload: []byte("Hello"),
 	})
 	if err != nil {
@@ -384,7 +385,7 @@ import (
                 </p>
                 <p>
                   Similar to the code above, client2 needs to activate the Contact group using <code>GroupInfo</code> and <code>ActivateGroup</code>. (In this case, client2 has
-                  client1’s account public key from the shared contact in <code>contact.Contact.PK</code>.)
+                  client1’s account public key from the shared contact in <code>contact.Contact.Pk</code>.)
                 </p>
                 <p>
                   We’re almost done! Client2 calls <code>AppMessageSend</code> (

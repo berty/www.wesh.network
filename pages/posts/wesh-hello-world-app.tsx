@@ -62,14 +62,14 @@ import (
 	"context"
 	"fmt"
 
-	"berty.tech/weshnet"
-	"berty.tech/weshnet/pkg/protocoltypes"
+	"berty.tech/weshnet/v2"
+	"berty.tech/weshnet/v2/pkg/protocoltypes"
 )`}
                   </code>
                 </pre>
                 <p>
-                  We import <code>fmt</code> as usual in Go code so that we can print a message. We import <code>berty.tech/weshnet</code> so that we can call the Go function to initialize the Wesh service (explained below). Finally, your
-                  app interacts with the Wesh service through gRPC which uses Protobuf messages. Therefore, we import the Wesh API Protobuf types with <code>berty.tech/weshnet/pkg/protocoltypes</code>, and we import <code>context</code> because all of the gRPC calls use a Go context object (explained below).
+                  We import <code>fmt</code> as usual in Go code so that we can print a message. We import <code>berty.tech/weshnet/v2</code> so that we can call the Go function to initialize the Wesh service (explained below). Finally, your
+                  app interacts with the Wesh service through gRPC which uses Protobuf messages. Therefore, we import the Wesh API Protobuf types with <code>berty.tech/weshnet/v2/pkg/protocoltypes</code>, and we import <code>context</code> because all of the gRPC calls use a Go context object (explained below).
                 </p>
                 <p>To complete the example, paste the following main function and save the file.</p>
                 <pre>
@@ -91,7 +91,7 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println("Hello, world! My peer ID is", config.PeerID)
+	fmt.Println("Hello, world! My peer ID is", config.PeerId)
 }
 `}
                   </code>
@@ -113,7 +113,7 @@ func main() {
                   Finally, we interact with the Wesh service by calling <code>client.ServiceGetConfiguration</code> , passing the <code>ctx</code> that we created.
                   This method gets the current configuration of the service and is <a href="https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ProtocolService.ServiceGetConfiguration" target="_blank" rel="noreferrer">documented here</a>, along
                   with all the other API calls. Each API call takes a Protobuf request message. In this case there are no parameters, so we create an empty <code>protocoltypes.ServiceGetConfiguration_Request</code>. (We will see more complex examples later.) And each API call returns a Protobuf reply message, or sometimes a stream object. In this case it is a <a href=" https://buf.build/berty-technologies/weshnet/docs/main:weshnet.protocol.v1#weshnet.protocol.v1.ServiceGetConfiguration.Reply" target="_blank" rel="noreferrer">ServiceGetConfiguration.Reply</a>. So to finish, we print a happy message with
-                  the <code>PeerID</code> of the in-memory IPFS node.
+                  the <code>PeerId</code> of the in-memory IPFS node.
                 </p>
                 <p>To see the result, in a terminal enter:</p>
                 <pre>

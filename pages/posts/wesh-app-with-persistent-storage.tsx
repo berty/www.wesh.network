@@ -197,7 +197,7 @@ go run . `}
 
         <Footer />
         <div className={styles.credits}>
-          <p>Copyright © 2023 – Berty.Tech non-profit organization</p>
+          <p>Copyright © 2025 – Berty.Tech non-profit organization</p>
           <div>
             <a href="https://crpt.fyi/berty-discord" rel="noreferrer" target="_blank">
               <img src="/img/Discord.png" alt="" />

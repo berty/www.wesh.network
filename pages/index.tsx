@@ -320,7 +320,7 @@ export default function Home() {
         */}
         <Footer />
         <div className={styles.credits}>
-          <p>Copyright © 2023 – Berty.Tech non-profit organization</p>
+          <p>Copyright © 2025 – Berty.Tech non-profit organization</p>
           <div>
             {/* <img src="./img/Telegram.png" alt="" /> */ }
             {/* <img src="./img/Twitter.png" alt="" /> */ }

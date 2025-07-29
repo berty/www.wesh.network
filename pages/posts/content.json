@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "id": "6",
+      "title": "6 - Peer Discovery Mechanism Overview",
+      "pubDate": "29/07/2025",
+      "description": "Peer discovery is a fundamental mechanism of Wesh Network that needs to happen before two or more users can exchange messages. In this article we will take a detailed look at the main peers discovery options so builders can better understand how these can be used.",
+      "content": "",
+      "author": "Berty Team",
+      "img": "/img/LogoCubes.svg",
+      "link": "peer-discovery-mechanism-overview"
+    },
+    {
       "id": "5",
       "title": "5 - Wesh: Flight of a Byte",
       "pubDate": "20/07/2023",

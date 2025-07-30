@@ -78,7 +78,7 @@ export default function Post() {
                   works only for devices residing on the same LAN network.</span></p>
 
                 <div style={{ textAlign: "center", margin: "20px 0" }}>
-                  <img alt="" src="/img/blog6-image22.png" height={200} />
+                  <img className="img-post" alt="" src="/img/blog6-image22.png" height={400} />
                 </div>
 
 
@@ -101,7 +101,7 @@ export default function Post() {
                     documentation</a></span><span>&nbsp;from IPFS.</span></p>
 
                 <div style={{ textAlign: "center", margin: "20px 0" }}>
-                  <img alt="" src="/img/blog6-image11.png" height={200} />
+                  <img className="img-post" alt="" src="/img/blog6-image11.png" height={400} />
                 </div>
 
 
@@ -130,7 +130,7 @@ export default function Post() {
                   order for peer discovery to work.</span></p>
 
                 <div style={{ textAlign: "center", margin: "20px 0" }}>
-                  <img alt="" src="/img/blog6-image33.png" height={200} />
+                  <img className="img-post" alt="" src="/img/blog6-image33.png" height={400} />
                 </div>
 
                 <h3>Conclusion and a comparison between the

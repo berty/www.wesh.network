@@ -4,10 +4,8 @@ import Footer from "../components/Footer/Footer"
 import styles from "../../styles/Home.module.scss"
 import React from "react"
 import hljs from "highlight.js"
-import content from "./content.json"
 
 export default function Post() {
-  const post = content.items.find((i) => i.id === "5")
 
   React.useEffect(() => {
     const highlight = async () => {
@@ -240,7 +238,7 @@ export default function Post() {
 
                 <p>
                   <i>
-                    Posted by {post?.author} on {post?.pubDate}
+                    Posted by Berty Team on 29/07/2025.
                   </i>
                 </p>
               </div>

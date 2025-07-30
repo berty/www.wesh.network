@@ -1,0 +1,229 @@
+/* comparison-table.css */
+.table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'SF Mono', Consolas, monospace;
+}
+
+/* Desktop Table */
+.comparison-table {
+    min-width: 600px;
+    /* width: max-content; */
+    border-collapse: collapse;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-right: 1px solid #e1e5e9;
+}
+
+.comparison-table th:last-child,
+.comparison-table td:last-child {
+    border-right: none;
+}
+
+.comparison-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.comparison-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Header Styling */
+.method-header {
+    background: #f8f9fa;
+    border-bottom: 2px solid #e1e5e9;
+    padding: 16px 20px;
+}
+
+.method-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.method-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.method-badge.local {
+    background: #e8f5e8;
+    color: #2d7738;
+}
+
+.method-badge.distributed {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.method-badge.server {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+/* Row Styling */
+.description-row td {
+    background: #fafbfc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.description-row strong {
+    color: #2c3e50;
+}
+
+.sub-note {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.pros-row {
+    background: #f8fff8;
+}
+
+.cons-row {
+    background: #fff8f8;
+}
+
+.pros-header,
+.cons-header {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.25px;
+}
+
+.pros-header {
+    color: #28a745;
+}
+
+.cons-header {
+    color: #dc3545;
+}
+
+.comparison-table ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.comparison-table li {
+    margin-bottom: 6px;
+    padding-left: 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #495057;
+    position: relative;
+}
+
+.comparison-table li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.pros-row li:before {
+    color: #28a745;
+}
+
+.cons-row li:before {
+    color: #dc3545;
+}
+
+.comparison-table li:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile Stack - Hidden by default */
+.mobile-stack {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table-container {
+        /* width: 100%; */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+    
+    .comparison-grid {
+        /* min-width: 600px; */
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .method-card {
+        padding: 20px;
+    }
+    
+    .method-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .method-card {
+        padding: 16px;
+    }
+    
+    .method-header h3 {
+        font-size: 18px;
+    }
+}
+
+/* Dark mode support */
+/* @media (prefers-color-scheme: dark) {
+    .method-card {
+        background: #1a1a1a;
+        border-color: #333;
+        color: #e0e0e0;
+    }
+    
+    .method-header {
+        border-bottom-color: #333;
+    }
+    
+    .method-header h3 {
+        color: #ffffff;
+    }
+    
+    .method-description p {
+        color: #cccccc;
+    }
+    
+    .sub-note {
+        color: #999;
+    }
+    
+    .pros li,
+    .cons li {
+        color: #cccccc;
+    }
+} */

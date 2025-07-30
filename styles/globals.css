@@ -122,3 +122,11 @@ pre {
 		width: 89vw;
 	}
 }
+
+
+@media only screen and (max-width: 768px) {
+  .img-post {
+    max-width: 300px;
+    height: auto;
+  }
+}
